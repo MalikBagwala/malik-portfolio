@@ -132,3 +132,72 @@ nav {
 #work {
   background: var(--gray-100);
 }
+#work .container {
+  padding: 6rem 0;
+}
+
+.title-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h2.title {
+  color: var(--purple-color);
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.title-ruling {
+  margin: 5px;
+  width: 7%;
+  height: 2px;
+  outline: none;
+  border: none;
+  background: var(--gray-600);
+}
+/* Work Card */
+.work-card {
+  margin: 3.5rem 0px;
+  width: 100%;
+  height: 500px;
+  background: white;
+  display: flex;
+}
+
+.work-card .image {
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+
+.work-card .image .card-img {
+  height: 100%;
+  margin-left: -15px;
+  transition: transform 0.6s ease-in;
+}
+
+.work-card .image .card-img:hover {
+  transform: scale(1.2) rotate(-9deg);
+}
+
+.work-card .content {
+  padding: 3rem;
+  width: 50%;
+}
+
+.work-card .content .heading {
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--gray-800);
+}
+
+.work-card .content .card-text {
+  color: var(--gray-500);
+  margin-top: 1.4rem;
+  line-height: 1.5;
+  font-size: 1.3rem;
+}
