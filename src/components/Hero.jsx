@@ -1,6 +1,6 @@
 import React from "react"
-import ProfileImage from "./ProfileImage"
 import Button from "./Button"
+import ProfileImage from "./profileImage"
 
 const Hero = () => {
   return (
@@ -16,13 +16,15 @@ const Hero = () => {
             </p>
             <Button
               style={{
-                marginTop: 100,
+                marginTop: 75,
               }}
             >
               About Me
             </Button>
           </div>
-          <ProfileImage />
+          <div style={{ width: 400, height: 400, background: "salmon" }}>
+            <ProfileImage />
+          </div>
         </div>
       </div>
     </div>

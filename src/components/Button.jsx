@@ -1,29 +1,24 @@
-import React from "react"
 import styled from "styled-components"
 
-const Btn = styled.button`
+const Button = styled.button`
+  padding: ${props => (props.card ? "0.7rem 2.3rem" : "1.3rem 2.3rem")};
   align-self: flex-start;
-  background: var(--orange-color);
-  padding: 1.3rem 2.3rem;
-  font-size: 1.3rem;
-  color: white;
-  font-weight: lighter;
+  background-image: linear-gradient(-60deg, #ffba00 0%, #ffdc00 100%);
+  border-radius: 40px;
+  font-size: ${props => (props.card ? "0.9rem" : "1.3rem")};
+
+  color: var(--purple-color);
+  font-weight: bold;
+  box-shadow: rgba(101, 41, 255, 0.15) 0px 10px 20px;
   text-transform: uppercase;
-  border-radius: 0px;
-  cursor: pointer;
+
   :hover {
-    background: var(--gray-100);
-    color: var(--orange-color);
-    transition: all 0.3s ease-in;
+    transform: ${props => (props.card ? "translateY(-7px)" : "none")};
+    box-shadow: ${props =>
+      props.card
+        ? "rgba(101, 41, 255, 0.15) 0px 10px 20px"
+        : "rgba(22, 22, 22, 0.5) 0px 0px 12rem 0px"};
+    transition: all 0.4s ease 0s;
   }
 `
-
-const Button = ({ children, style, className }) => {
-  return (
-    <Btn className={className} style={style}>
-      {children}
-    </Btn>
-  )
-}
-
 export default Button

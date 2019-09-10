@@ -19,6 +19,7 @@
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 button {
@@ -93,7 +94,15 @@ nav {
   font-size: 8rem;
   font-weight: lighter;
 }
-
+.link-highlight {
+  padding: 1.2px 1.6px;
+  border-bottom: 2.5px solid var(--purple-color);
+  transition: all 0.3s ease-in-out;
+}
+.link-highlight:hover {
+  background: var(--purple-color);
+  color: white;
+}
 .highlight {
   font-weight: bold;
   color: var(--yellow-color);
@@ -198,6 +207,10 @@ h2.title {
 .work-card .content .card-text {
   color: var(--gray-500);
   margin-top: 1.4rem;
-  line-height: 1.5;
+  line-height: 1.7;
   font-size: 1.3rem;
+}
+
+.work-card .buttons {
+  margin-top: 2rem;
 }

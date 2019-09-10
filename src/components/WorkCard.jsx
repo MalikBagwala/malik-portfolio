@@ -1,23 +1,29 @@
 import React from "react"
 import LightsOut from "./lights-out.jpeg"
-import ProfileImage from "./ProfileImage"
-const WorkCard = () => {
+import ElevatedImage from "./ElevatedImage"
+import { get } from "lodash"
+import Button from "./Button"
+const WorkCard = ({ frontmatter, children }) => {
+  const title = get(frontmatter, "title")
+  const live = get(frontmatter, "live")
+  const source = get(frontmatter, "source")
   return (
     <div className="work-card">
-      <ProfileImage fill={true} src={LightsOut} />
-      {/* <img src={LightsOut} alt="" className="card-img" /> */}
-      {/* </div> */}
+      <ElevatedImage fill={true} src={LightsOut} />
       <div className="content">
-        <h3 className="heading">Lights Out</h3>
-
-        <p className="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nihil
-          earum officiis, saepe ipsam esse facere alias et odio illo nesciunt
-          laboriosam illum magni inventore modi aspernatur, mollitia voluptas!
-          Explicabo, corrupti quia eos error esse, omnis officiis suscipit
-          excepturi atque ipsa, veniam ab! Necessitatibus ipsum totam suscipit
-          eum nam mollitia.
-        </p>
+        <h3 className="heading">{title}</h3>
+        <p
+          className="card-text"
+          dangerouslySetInnerHTML={{ __html: children }}
+        ></p>
+        <div className="buttons">
+          <Button as="a" href={live} card={true} style={{ marginRight: 30 }}>
+            Live
+          </Button>
+          <Button as="a" href={source} card={true}>
+            Source
+          </Button>
+        </div>
       </div>
     </div>
   )
