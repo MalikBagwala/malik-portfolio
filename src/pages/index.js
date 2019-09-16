@@ -1,10 +1,9 @@
-import { Link } from "gatsby"
 import React from "react"
-import SEO from "../components/seo"
-import "../css/style.css"
 import Hero from "../components/Hero"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import Work from "../components/Work"
+import "../css/style.css"
 
 const IndexPage = () => (
   <Layout>

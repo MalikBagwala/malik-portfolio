@@ -9,7 +9,8 @@ const Hero = () => {
         <div className="hero-wrapper">
           <div className="text-content">
             <h1 className="heading">
-              Hey ✌,<br></br>I'm <span className="highlight">Malik</span>
+              Hey <span role="img">✌</span>,<br></br>I'm
+              <span className="highlight"> Malik</span>
             </h1>
             <p className="description">
               A <span className="highlight">Designgineer</span>
@@ -22,7 +23,7 @@ const Hero = () => {
               About Me
             </Button>
           </div>
-          <div style={{ width: 400, height: 400, background: "salmon" }}>
+          <div style={{ width: 400, height: 398 }}>
             <ProfileImage />
           </div>
         </div>

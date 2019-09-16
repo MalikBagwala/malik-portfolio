@@ -1,15 +1,16 @@
-import React from "react"
-import LightsOut from "./lights-out.jpeg"
-import ElevatedImage from "./ElevatedImage"
 import { get } from "lodash"
+import React from "react"
 import Button from "./Button"
+import ElevatedImage from "./ElevatedImage"
+// import ElevatedGatsbyImage from "./ElevatedGatsbyImage"
 const WorkCard = ({ frontmatter, children }) => {
   const title = get(frontmatter, "title")
   const live = get(frontmatter, "live")
   const source = get(frontmatter, "source")
+  const thumbnail = get(frontmatter, "thumbnail.childImageSharp")
   return (
     <div className="work-card">
-      <ElevatedImage fill={true} src={LightsOut} />
+      <ElevatedImage fill={true} src={thumbnail.fluid.src} />
       <div className="content">
         <h3 className="heading">{title}</h3>
         <p

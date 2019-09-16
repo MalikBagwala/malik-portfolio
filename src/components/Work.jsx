@@ -14,6 +14,13 @@ const Work = () => {
               source
               technologies
               title
+              thumbnail {
+                childImageSharp {
+                  fluid(maxWidth: 800, maxHeight: 800, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
             html
           }
@@ -23,7 +30,6 @@ const Work = () => {
   `)
   const data = _.get(workData, "allMarkdownRemark.edges")
   const works = _.map(data, data => data.node)
-
   return (
     <div id="work">
       <div className="container">
