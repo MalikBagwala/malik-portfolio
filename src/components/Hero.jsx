@@ -1,6 +1,7 @@
 import React from "react"
 import Button from "./Button"
 import ProfileImage from "./profileImage"
+import AnimatedIcon from "./AnimatedIcon"
 
 const Hero = () => {
   return (
@@ -9,7 +10,8 @@ const Hero = () => {
         <div className="hero-wrapper">
           <div className="text-content">
             <h1 className="heading">
-              Hey <span role="img">✌</span>,<br></br>I'm
+              Hey <AnimatedIcon />
+              <br></br>I'm
               <span className="highlight"> Malik</span>
             </h1>
             <p className="description">
