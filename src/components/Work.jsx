@@ -31,7 +31,7 @@ const Work = () => {
   const data = _.get(workData, "allMarkdownRemark.edges")
   const works = _.map(data, data => data.node)
   return (
-    <div id="work">
+    <div id="work" className="section-area">
       <div className="container">
         <div className="title-content">
           <h2 className="title">Work</h2>

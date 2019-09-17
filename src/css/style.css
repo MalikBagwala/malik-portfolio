@@ -266,3 +266,8 @@ footer img {
 footer img:hover {
   transform: scale(1.1);
 }
+
+/* About Section */
+#about .container {
+  padding: 6rem 0;
+}

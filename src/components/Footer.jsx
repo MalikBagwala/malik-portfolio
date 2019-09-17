@@ -6,6 +6,7 @@ import styled from "styled-components"
 
 const StyledButton = styled(Button)`
   margin-top: 1rem;
+  padding: 1rem 2.1rem;
 `
 
 const Footer = () => {
