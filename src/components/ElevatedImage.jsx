@@ -3,8 +3,8 @@ import { useSpring, animated } from "react-spring"
 import styled from "styled-components"
 
 const ElevatedImg = styled(animated.img)`
-  width: ${props => (props.fillsize ? "50%" : "400px")};
-  height: ${props => (props.fillsize ? "100%" : "400px")};
+  width: ${props => (props.fillsize ? "600px" : "400px")};
+  height: ${props => (props.fillsize ? "600px" : "400px")};
 
   border-radius: 5px;
   background-image: ${props => `url(${props.src})`};

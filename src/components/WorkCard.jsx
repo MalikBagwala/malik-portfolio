@@ -18,10 +18,16 @@ const WorkCard = ({ frontmatter, children }) => {
           dangerouslySetInnerHTML={{ __html: children }}
         ></p>
         <div className="buttons">
-          <Button as="a" href={live} card={true} style={{ marginRight: 30 }}>
+          <Button
+            as="a"
+            href={live}
+            card={true}
+            style={{ marginRight: 30 }}
+            purple
+          >
             Live
           </Button>
-          <Button as="a" href={source} card={true}>
+          <Button as="a" href={source} card={true} purple>
             Source
           </Button>
         </div>

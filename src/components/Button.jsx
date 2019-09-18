@@ -1,11 +1,13 @@
 import styled from "styled-components"
 
 const Button = styled.button`
-  padding: ${props => (props.card ? "0.7rem 2.3rem" : "1.3rem 2.3rem")};
+  padding: ${props => (props.card ? "0.7rem 2.3rem" : "1.2rem 3.3rem")};
   align-self: ${props => (props.center ? "center" : "start")};
   background-image: ${props =>
     props.purple
       ? "linear-gradient( 88.7deg,  rgba(207,150,207,1) -2.4%, rgba(107,116,179,1) 102% )"
+      : props.light
+      ? "background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)"
       : "linear-gradient(-60deg, #ffba00 0%, #ffdc00 100%)"};
 
   border-radius: 40px;

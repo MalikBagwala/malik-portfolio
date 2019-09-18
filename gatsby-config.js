@@ -6,8 +6,10 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-scroll-indicator`,
     {
       resolve: `gatsby-transformer-remark`,
+
       options: {
         resolve: `gatsby-remark-images`,
         options: {
@@ -17,7 +19,7 @@ module.exports = {
           maxWidth: 590,
           loading: "lazy",
           withWebp: true,
-          quality: 75,
+          quality: 90,
         },
       },
     },

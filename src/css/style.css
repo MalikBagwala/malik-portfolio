@@ -189,7 +189,7 @@ h2.title {
 .work-card {
   margin: 3.5rem 0px;
   width: 100%;
-  height: 500px;
+  height: 600px;
   background: white;
   display: flex;
 }
@@ -270,4 +270,39 @@ footer img:hover {
 /* About Section */
 #about .container {
   padding: 6rem 0;
+}
+
+#about .container .about-content {
+  padding: 1rem 6rem;
+}
+#about .container .about-content p {
+  color: var(--gray-600);
+  margin-top: 1.4rem;
+  line-height: 1.7;
+  font-size: 1.4rem;
+  /* text-align: left; */
+  text-align: justify;
+}
+
+#about .container .about-content .skill-stack {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--purple-color);
+}
+#about .container .about-content .highlight {
+  font-weight: normal;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--gray-800);
+}
+
+p.note {
+  color: var(--gray-500);
+  margin-top: 5px;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+.link-active {
+  color: var(--purple-color);
 }
