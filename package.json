@@ -45,11 +45,11 @@
   "license": "MIT",
   "scripts": {
     "build": "env-cmd -f .env gatsby build",
-    "develop": "env-cmd -f .env gatsby develop",
-    "dev": "yarn build && yarn serve -s build",
+    "develop": "env-cmd -f .env gatsby develop -o",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve -p 9000 -o",
+    "dev": "yarn build && yarn serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "repository": {
