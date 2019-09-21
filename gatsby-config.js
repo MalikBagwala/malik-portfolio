@@ -7,11 +7,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      options: {
-        bucketName: "creative-malik-portfolio",
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
 
       options: {
