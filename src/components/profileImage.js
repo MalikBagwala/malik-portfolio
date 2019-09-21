@@ -21,8 +21,6 @@ const ProfileImage = () => {
       }
     }
   `)
-  // const imageSource = get(data, "file.childImageSharp.fluid")
-  // console.log(data, imageSource)
   return (
     <StyledImage
       fluid={data.placeholderImage.childImageSharp.fluid}

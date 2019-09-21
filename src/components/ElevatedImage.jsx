@@ -11,6 +11,7 @@ const ElevatedImg = styled(animated.img)`
   transition: box-shadow 0.5s;
   will-change: transform;
   border: 15px solid white;
+  cursor: pointer;
   &:hover {
     box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
   }

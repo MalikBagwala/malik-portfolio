@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const Button = styled.button`
-  padding: ${props => (props.card ? "0.7rem 2.3rem" : "1.2rem 3.3rem")};
+  padding: ${props => (props.card ? "0.7rem 2rem" : "1.2rem 3.3rem")};
   align-self: ${props => (props.center ? "center" : "start")};
   background-image: ${props =>
     props.purple
@@ -18,13 +18,22 @@ const Button = styled.button`
   box-shadow: rgba(101, 41, 255, 0.15) 0px 10px 20px;
   text-transform: uppercase;
   cursor: pointer;
-  :hover {
-    transform: ${props => (props.card ? "translateY(-7px)" : "none")};
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    transform: translateY(-3px);
     box-shadow: ${props =>
       props.card
         ? "rgba(101, 41, 255, 0.15) 0px 10px 20px"
         : "rgba(22, 22, 22, 0.5) 0px 0px 12rem 0px"};
-    transition: all 0.4s ease 0s;
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: ${props =>
+      props.card
+        ? "rgba(101, 41, 255, 0.15) 0px 10px 20px"
+        : "rgba(22, 22, 22, 0.5) 0px 0px 12rem 0px"};
   }
 `
 export default Button

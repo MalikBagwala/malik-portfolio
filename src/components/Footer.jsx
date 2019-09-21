@@ -1,13 +1,28 @@
 import React from "react"
-import Button from "./Button"
-import Mail from "../images/gmail.png"
-import Github from "../images/github.png"
 import styled from "styled-components"
-
+import Button from "./Button"
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+// import ButtonLink from "./ButtonLink"
 const StyledButton = styled(Button)`
   margin-top: 1rem;
   padding: 1rem 2.1rem;
 `
+// const SocialMediaButton = styled.button`
+//   height: 3.3rem;
+//   width: 3.3rem;
+//   border-radius: 50%;
+//   background: var(--purple-color);
+// `
+// const StyledIcon = styled(FontAwesomeIcon)`
+//   transition: all 0.3s ease-out;
+//   ${SocialMediaButton}:hover {
+//     transform: rotate(360deg);
+//   }
+// `
+
+// const StyledLink = styled.a``
 
 const Footer = () => {
   return (
@@ -21,8 +36,11 @@ const Footer = () => {
         Contact Me
       </StyledButton>
       <div className="social">
-        <img src={Mail} alt="Gmail" width={32} height={32} />
-        <img src={Github} alt="Github" width={32} height={32} />
+        {/* <StyledLink>
+          <SocialMediaButton>
+            <StyledIcon color="white" icon={faEnvelope} size="2x" />
+          </SocialMediaButton>
+        </StyledLink> */}
       </div>
     </footer>
   )

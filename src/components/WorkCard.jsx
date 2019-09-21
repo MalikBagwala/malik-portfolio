@@ -1,16 +1,19 @@
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { get } from "lodash"
 import React from "react"
-import Button from "./Button"
+import ButtonLink from "./ButtonLink"
 import ElevatedImage from "./ElevatedImage"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-const WorkCard = ({
-  live,
-  source,
-  title,
-  thumbnail,
-  description,
-  children,
-}) => {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faLink } from "@fortawesome/free-solid-svg-icons"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
+
+import styled from "styled-components"
+
+const StyledIcon = styled(FontAwesomeIcon)`
+  margin-right: 3px;
+`
+
+const WorkCard = ({ live, source, title, thumbnail, description }) => {
   const src = thumbnail && get(thumbnail, "fixed.src")
   return (
     <div className="work-card">
@@ -21,18 +24,17 @@ const WorkCard = ({
           {documentToReactComponents(description.json)}
         </p>
         <div className="buttons">
-          <Button
-            as="a"
+          <ButtonLink
             href={live}
             card={true}
             style={{ marginRight: 30 }}
             purple
           >
-            Live
-          </Button>
-          <Button as="a" href={source} card={true} purple>
-            Source
-          </Button>
+            <StyledIcon icon={faLink} /> Live
+          </ButtonLink>
+          <ButtonLink href={source} card={true} purple>
+            <StyledIcon icon={faGithub} /> Source
+          </ButtonLink>
         </div>
       </div>
     </div>
