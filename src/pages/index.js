@@ -3,7 +3,7 @@ import Hero from "../components/Hero"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Work from "../components/Work"
-import "../css/style.css"
+import "../scss/main.scss"
 import About from "../components/About"
 const IndexPage = () => (
   <Layout>

@@ -5,34 +5,33 @@ import WorkCard from "./WorkCard"
 const Work = () => {
   const workData = useStaticQuery(graphql`
     {
-      allMarkdownRemark {
+      allContentfulWork {
         edges {
           node {
-            id
-            frontmatter {
-              live
-              source
-              technologies
-              title
-              thumbnail {
-                childImageSharp {
-                  fluid(maxWidth: 800, maxHeight: 800, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
+            contentful_id
+            title
+            description {
+              json
+            }
+            live
+            source
+            thumbnail {
+              contentful_id
+              fixed(height: 500, quality: 100, toFormat: WEBP) {
+                src
               }
             }
-            html
           }
         }
       }
     }
   `)
-  const data = _.get(workData, "allMarkdownRemark.edges")
+  const data = _.get(workData, "allContentfulWork.edges")
   const works = _.map(data, data => data.node)
   const handleScroll = e => {
     console.log(e)
   }
+  console.log(data)
   return (
     <div id="work" className="section-area" onScroll={handleScroll}>
       <div className="container">
@@ -41,11 +40,7 @@ const Work = () => {
           <hr className="title-ruling" />
         </div>
         {works.map(work => {
-          return (
-            <WorkCard key={work.id} frontmatter={work.frontmatter}>
-              {work.html}
-            </WorkCard>
-          )
+          return <WorkCard key={work.contentful_id} {...work}></WorkCard>
         })}
       </div>
     </div>

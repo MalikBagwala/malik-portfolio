@@ -1,22 +1,26 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "creative-malik-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A collection of my works in the world of web development and app development",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Malik Bagwala <m.bagwala@outlook.com>",
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
     "env-cmd": "^10.0.1",
     "gatsby": "^2.15.9",
     "gatsby-image": "^2.2.17",
     "gatsby-plugin-manifest": "^2.2.14",
     "gatsby-plugin-offline": "^2.2.10",
     "gatsby-plugin-react-helmet": "^3.1.6",
+    "gatsby-plugin-sass": "^2.1.15",
     "gatsby-plugin-sharp": "^2.2.20",
     "gatsby-remark-images": "^3.1.21",
+    "gatsby-source-contentful": "^2.1.40",
     "gatsby-source-filesystem": "^2.1.21",
     "gatsby-transformer-remark": "^2.6.22",
     "gatsby-transformer-sharp": "^2.2.13",
     "lodash": "^4.17.15",
+    "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -26,25 +30,31 @@
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "serve": "^11.1.0"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "react",
+    "contentful",
+    "react-spring",
+    "portfolio",
+    "styled-components",
+    "content-management-system"
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "develop:prisma": "env-cmd -f .env.development gatsby develop",
+    "build": "env-cmd -f .env gatsby build",
+    "develop": "env-cmd -f .env gatsby develop",
+    "dev": "yarn build && yarn serve -s build",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
-    "deploy": "gatsby-plugin-s3 deploy",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/MalikBagwala/creative-malik-portfolio"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
