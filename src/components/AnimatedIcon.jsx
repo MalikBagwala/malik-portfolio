@@ -16,11 +16,23 @@ const AnimatedIcon = () => {
 
   return transitions.map(({ item, key, props }) =>
     item ? (
-      <Span role="img" style={props} onClick={e => set(toggle => !toggle)}>
+      <Span
+        role="img"
+        key="hey"
+        aria-label="Hello Emoji"
+        style={props}
+        onClick={e => set(toggle => !toggle)}
+      >
         ✌
       </Span>
     ) : (
-      <Span role="img" style={props} onClick={e => set(toggle => !toggle)}>
+      <Span
+        key="cool"
+        role="img"
+        aria-label="Crossed Emoji"
+        style={props}
+        onClick={e => set(toggle => !toggle)}
+      >
         🤞
       </Span>
     )

@@ -21,8 +21,8 @@ const Footer = () => {
         Contact Me
       </StyledButton>
       <div className="social">
-        <img src={Mail} width={32} height={32} />
-        <img src={Github} width={32} height={32} />
+        <img src={Mail} alt="Gmail" width={32} height={32} />
+        <img src={Github} alt="Github" width={32} height={32} />
       </div>
     </footer>
   )

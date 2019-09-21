@@ -5,7 +5,6 @@ import SEO from "../components/seo"
 import Work from "../components/Work"
 import "../css/style.css"
 import About from "../components/About"
-
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />

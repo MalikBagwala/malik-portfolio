@@ -30,8 +30,11 @@ const Work = () => {
   `)
   const data = _.get(workData, "allMarkdownRemark.edges")
   const works = _.map(data, data => data.node)
+  const handleScroll = e => {
+    console.log(e)
+  }
   return (
-    <div id="work" className="section-area">
+    <div id="work" className="section-area" onScroll={handleScroll}>
       <div className="container">
         <div className="title-content">
           <h2 className="title">Work</h2>

@@ -9,14 +9,11 @@ const StyledLink = styled(Link)`
   font-size: 0.9rem;
   cursor: pointer;
 `
-
 const Navbar = () => {
   return (
     <nav className="main-nav">
       <div className="container">
-        <StyledLink to="/" brand>
-          Malik
-        </StyledLink>
+        <StyledLink to="/">Malik</StyledLink>
         <div className="links">
           <StyledLink
             to="about"

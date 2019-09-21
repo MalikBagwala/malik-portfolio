@@ -10,6 +10,7 @@
     "gatsby-plugin-manifest": "^2.2.14",
     "gatsby-plugin-offline": "^2.2.10",
     "gatsby-plugin-react-helmet": "^3.1.6",
+    "gatsby-plugin-s3": "^0.3.2",
     "gatsby-plugin-scroll-indicator": "^0.1.4",
     "gatsby-plugin-sharp": "^2.2.20",
     "gatsby-remark-images": "^3.1.21",
@@ -23,7 +24,8 @@
     "react-helmet": "^5.2.1",
     "react-scroll": "^1.7.14",
     "react-spring": "^8.0.27",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "typeface-rubik": "^0.0.72"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
@@ -37,6 +39,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
+    "deploy": "gatsby-plugin-s3 deploy",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },

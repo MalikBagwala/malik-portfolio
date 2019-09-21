@@ -6,7 +6,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-scroll-indicator`,
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "creative-malik-portfolio",
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
 

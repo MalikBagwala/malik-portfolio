@@ -18,8 +18,11 @@ const About = () => {
               <span className="highlight">computer science</span>. I like
               exploring newer and better software engineering paradigms and to
               be completly honest, I do get excited about new frameworks{" "}
-              <span role="img">😆</span>, So here are a few of my projects that
-              are built using <span className="highlight">bleeding edge </span>
+              <span role="img" aria-label="smile">
+                😆
+              </span>
+              , So here are a few of my projects that are built using{" "}
+              <span className="highlight">bleeding edge </span>
               frameworks and technologies. My skill stack includes but is not
               limited to,
             </p>
