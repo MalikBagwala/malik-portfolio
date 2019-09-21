@@ -1,13 +1,15 @@
 @font-face {
-  font-family: Gilroy;
-  font-weight: bold;
-  src: url("../../public/static/Gilroy-ExtraBold-0f6e082f42f5247d82c3ade9c2a8f928.otf");
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: Gilroy;
-  font-weight: lighter;
-  src: url("../../public/static/Gilroy-Light-c62aded729bf7146d491275e5019d7fc.otf");
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
 }
 * {
   margin: 0;
