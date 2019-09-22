@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme}>
       <section>
         <Navbar />
-        <SEO title="Home" />
+        <SEO title="Portfolio Page" />
         {children}
         <Footer />
       </section>
