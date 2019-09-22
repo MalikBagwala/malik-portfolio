@@ -2,35 +2,74 @@ import React from "react"
 import Button from "./Button"
 import ProfileImage from "./profileImage"
 import AnimatedIcon from "./AnimatedIcon"
+import styled from "styled-components"
+import { Container, TextHighlight } from "../utils/styledComponents"
+const Background = styled.div`
+  width: 100%;
+  height: 100vh;
+  background: var(--purple-color);
+`
+const HeroContainer = styled(Container)`
+  height: 100%;
+`
+const Flex = styled.div`
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: ${props => props.theme.fonts.primary}, sans-serif;
+`
+const TextContainer = styled.div`
+  width: 60%;
+  height: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+`
+
+const H1 = styled.h1`
+  font-size: 8rem;
+  font-weight: lighter;
+`
+
+const P = styled.p`
+  font-size: 1.8rem;
+`
+
+const AboutMe = styled(Button)`
+  margin-top: 3rem;
+`
+
+const ProfileImageContainer = styled.div`
+  height: 400px;
+  width: 400px;
+`
 
 const Hero = () => {
   return (
-    <div className="hero-background">
-      <div className="container">
-        <div className="hero-wrapper">
-          <div className="text-content">
-            <h1 className="heading">
+    <Background>
+      <HeroContainer>
+        <Flex>
+          <TextContainer>
+            <H1>
               Hey <AnimatedIcon />
-              <br></br>I'm
-              <span className="highlight"> Malik</span>
-            </h1>
-            <p className="description">
-              A <span className="highlight">Designgineer</span>
-            </p>
-            <Button
-              style={{
-                marginTop: 75,
-              }}
-            >
-              About Me
-            </Button>
-          </div>
-          <div className="profile-image" style={{ width: 400, height: 398 }}>
+              <br />
+              I'm
+              <TextHighlight bold> Malik</TextHighlight>
+            </H1>
+            <P>
+              A <TextHighlight>Designgineer</TextHighlight>
+            </P>
+            <AboutMe>About Me</AboutMe>
+          </TextContainer>
+          <ProfileImageContainer>
             <ProfileImage />
-          </div>
-        </div>
-      </div>
-    </div>
+          </ProfileImageContainer>
+        </Flex>
+      </HeroContainer>
+    </Background>
   )
 }
 

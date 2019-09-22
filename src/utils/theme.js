@@ -1,4 +1,7 @@
 const theme = {
+  fonts: {
+    primary: "Gilroy",
+  },
   mediaQueries: {
     smallest: `only screen and (max-width: 25em)`,
     smaller: "only screen and (max-width: 31.25em)",

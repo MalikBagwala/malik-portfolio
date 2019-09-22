@@ -1,65 +1,6 @@
 @import "./utils.scss";
 @import "./variables.scss";
 
-.hero-background {
-  width: 100%;
-  height: 100vh;
-  background: var(--purple-color);
-  .container {
-    height: 100%;
-  }
-  .hero-wrapper {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    font-family: Gilroy, sans-serif;
-    .text-content {
-      width: 60%;
-      height: 100%;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      color: white;
-      .btn {
-        background: var(--orange-color);
-        padding: 0.8rem 1.4rem;
-        color: white;
-        font-weight: bold;
-        text-transform: uppercase;
-        border-radius: 7px;
-      }
-      .heading {
-        font-size: 8rem;
-        font-weight: lighter;
-      }
-    }
-  }
-}
-
-.link-highlight {
-  padding: 1.2px 1.6px;
-  border-bottom: 2.5px solid var(--purple-color);
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    background: var(--purple-color);
-    color: white;
-  }
-}
-.highlight {
-  font-weight: bold;
-  color: var(--yellow-color);
-}
-
-.description {
-  font-size: 1.8rem;
-  .highlight {
-    font-weight: lighter;
-    color: var(--orange-color);
-  }
-}
-
 /* Work SEction */
 
 #work {
