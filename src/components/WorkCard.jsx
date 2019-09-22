@@ -13,17 +13,47 @@ const StyledIcon = styled(FontAwesomeIcon)`
   margin-right: 3px;
 `
 
+const WorkCardWrapper = styled.div`
+  margin: 3.5rem 0px;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+`
+
+const Content = styled.div`
+  padding: 3rem;
+  width: 50%;
+`
+
+const H1 = styled.h1`
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--gray-800);
+`
+
+const P = styled.p`
+  color: var(--gray-500);
+  margin-top: 1.4rem;
+  line-height: 1.7;
+  font-size: 1.3rem;
+`
+
+const ButtonGroup = styled.div`
+  margin-top: 2rem;
+`
+
 const WorkCard = ({ live, source, title, thumbnail, description }) => {
   const src = thumbnail && get(thumbnail, "fixed.src")
   return (
-    <div className="work-card">
+    <WorkCardWrapper>
       <ElevatedImage src={src} />
-      <div className="content">
-        <h3 className="heading">{title}</h3>
-        <p className="card-text">
-          {documentToReactComponents(description.json)}
-        </p>
-        <div className="buttons">
+      <Content>
+        <H1>{title}</H1>
+        <P>{documentToReactComponents(description.json)}</P>
+        <ButtonGroup>
           <ButtonLink
             href={live}
             card={true}
@@ -35,9 +65,9 @@ const WorkCard = ({ live, source, title, thumbnail, description }) => {
           <ButtonLink href={source} card={true} purple>
             <StyledIcon icon={faGithub} /> Source
           </ButtonLink>
-        </div>
-      </div>
-    </div>
+        </ButtonGroup>
+      </Content>
+    </WorkCardWrapper>
   )
 }
 

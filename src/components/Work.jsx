@@ -2,6 +2,20 @@ import { graphql, useStaticQuery } from "gatsby"
 import _ from "lodash"
 import React from "react"
 import WorkCard from "./WorkCard"
+import SectionHeader from "./SectionHeader"
+import styled from "styled-components"
+import { Container } from "../utils/styledComponents"
+
+const WorkWrapper = styled.div`
+  background: var(--gray-100);
+  .container {
+    padding: 6rem 0;
+  }
+`
+const WorkContainer = styled(Container)`
+  padding: 6rem 0;
+`
+
 const Work = () => {
   const workData = useStaticQuery(graphql`
     {
@@ -28,22 +42,15 @@ const Work = () => {
   `)
   const data = _.get(workData, "allContentfulWork.edges")
   const works = _.map(data, data => data.node)
-  const handleScroll = e => {
-    console.log(e)
-  }
-  console.log(data)
   return (
-    <div id="work" className="section-area" onScroll={handleScroll}>
-      <div className="container">
-        <div className="title-content">
-          <h2 className="title">Work</h2>
-          <hr className="title-ruling" />
-        </div>
+    <WorkWrapper id="work">
+      <WorkContainer>
+        <SectionHeader>Work</SectionHeader>
         {works.map(work => {
           return <WorkCard key={work.contentful_id} {...work}></WorkCard>
         })}
-      </div>
-    </div>
+      </WorkContainer>
+    </WorkWrapper>
   )
 }
 
