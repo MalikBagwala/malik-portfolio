@@ -1,13 +1,11 @@
 import React from "react"
+import About from "../components/About"
 import Hero from "../components/Hero"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../layout/layout"
 import Work from "../components/Work"
 import "../css/style.css"
-import About from "../components/About"
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
     <Hero />
     <About />
     <Work />

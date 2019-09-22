@@ -1,6 +1,6 @@
 import React from "react"
 import Button from "./Button"
-import ProfileImage from "./profileImage"
+import ProfileImage from "./ProfileImage"
 import AnimatedIcon from "./AnimatedIcon"
 import styled from "styled-components"
 import { Container, TextHighlight } from "../utils/styledComponents"

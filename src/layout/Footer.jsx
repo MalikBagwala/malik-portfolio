@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Button from "./Button"
+import Button from "../components/Button"
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 // import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"

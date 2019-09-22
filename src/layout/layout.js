@@ -1,5 +1,5 @@
 import React from "react"
-import SEO from "./seo"
+import SEO from "../utils/seo"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 import { ThemeProvider } from "styled-components"
