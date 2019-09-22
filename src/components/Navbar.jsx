@@ -2,23 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "react-scroll"
 import { Container } from "../utils/styledComponents"
-const Nav = styled.nav`
-  position: fixed;
-  height: 60px;
-  background: rgba(255, 255, 255, 0.9);
-  width: 100%;
-  z-index: 10;
-  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
-    0 1px 3px 1px rgba(60, 64, 67, 0.149);
-  backdrop-filter: blur(10px);
-  a {
-    margin: 0px 0.5rem;
-    transition: color 0.2s ease-in;
-    &:hover {
-      color: var(--purple-color);
-    }
-  }
-`
 const NavContainer = styled(Container)`
   height: 100%;
   display: flex;
@@ -34,6 +17,40 @@ const StyledLink = styled(Link)`
 `
 const Links = styled.div`
   /* ... */
+`
+const Nav = styled.nav`
+  position: fixed;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
+    0 1px 3px 1px rgba(60, 64, 67, 0.149);
+  backdrop-filter: blur(10px);
+
+  a {
+    margin: 0px 0.5rem;
+    transition: color 0.2s ease-in;
+    &:hover {
+      color: var(--purple-color);
+    }
+  }
+  @media ${props => props.theme.mediaQueries.medium} {
+    bottom: 0;
+    height: 75px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.6),
+      0 1px 3px 1px rgba(60, 64, 67, 0.3);
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.8);
+    ${StyledLink} {
+      font-size: 1.1rem;
+    }
+  }
+  @media ${props => props.theme.mediaQueries.small} {
+    ${StyledLink} {
+      font-size: 0.95rem;
+    }
+  }
 `
 
 const Navbar = () => {
