@@ -25,7 +25,7 @@ const Hero = () => {
               About Me
             </Button>
           </div>
-          <div style={{ width: 400, height: 398 }}>
+          <div className="profile-image" style={{ width: 400, height: 398 }}>
             <ProfileImage />
           </div>
         </div>

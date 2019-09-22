@@ -15,6 +15,10 @@ const ElevatedImg = styled(animated.img)`
   &:hover {
     box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
   }
+  @media ${props => props.theme.mediaQueries.small} {
+    width: 100%;
+    height: 70% !important;
+  }
 `
 
 const calc = (x, y) => [
