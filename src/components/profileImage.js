@@ -12,18 +12,16 @@ const StyledImage = styled(Img)`
 const ProfileImage = () => {
   const data = useStaticQuery(graphql`
     {
-      placeholderImage: file(relativePath: { eq: "malik-profile.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 700, maxHeight: 700, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+      contentfulAsset(contentful_id: { eq: "5NkOM8Yz5pgnmOXIvBg8qP" }) {
+        fluid {
+          ...GatsbyContentfulFluid_withWebp
         }
       }
     }
   `)
   return (
     <StyledImage
-      fluid={data.placeholderImage.childImageSharp.fluid}
+      fluid={data.contentfulAsset.fluid}
       objectFit="cover"
       objectPosition="50% 50%"
     ></StyledImage>
