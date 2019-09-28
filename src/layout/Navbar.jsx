@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "react-scroll"
 import { Container } from "../utils/styledComponents"
+import { useTrail, animated, config } from "react-spring"
 const NavContainer = styled(Container)`
   height: 100%;
   display: flex;
@@ -16,7 +17,7 @@ const StyledLink = styled(Link)`
   cursor: pointer;
 `
 const Links = styled.div`
-  /* ... */
+  display: flex;
 `
 const Nav = styled.nav`
   position: fixed;
@@ -52,43 +53,52 @@ const Nav = styled.nav`
     }
   }
 `
-
+const sections = [
+  {
+    to: "about",
+    text: "about",
+  },
+  {
+    to: "work",
+    text: "work",
+  },
+  {
+    to: "contact",
+    text: "contact",
+  },
+]
 const Navbar = () => {
+  const navItemsTrail = useTrail(sections.length, {
+    config: config.wobbly,
+    delay: 300,
+    opacity: 1,
+    transform: "translateY(0px)",
+    from: {
+      opacity: 0,
+      transform: "translateY(-20px)",
+      display: "flex",
+      cursor: "pointer",
+    },
+  })
   return (
     <Nav>
       <NavContainer>
         <StyledLink to="/">Malik</StyledLink>
         <Links>
-          <StyledLink
-            to="about"
-            activeClass="link-active"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={800}
-          >
-            About
-          </StyledLink>
-          <StyledLink
-            to="work"
-            activeClass="link-active"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Work
-          </StyledLink>
-          <StyledLink
-            to="contact"
-            activeClass="link-active"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Contact
-          </StyledLink>
+          {navItemsTrail.map((propStyles, index) => (
+            <animated.span key={sections.to} style={propStyles}>
+              <StyledLink
+                to={sections[index].to}
+                activeClass="link-active"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                {sections[index].text}
+              </StyledLink>
+            </animated.span>
+          ))}
         </Links>
       </NavContainer>
     </Nav>
