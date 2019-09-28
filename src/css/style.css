@@ -2,12 +2,14 @@
   font-family: "Gilroy";
   src: url("../fonts/Gilroy-ExtraBold.woff2") format("woff2");
   font-weight: 800;
+  font-display: auto;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy";
   src: url("../fonts/Gilroy-Light.woff2") format("woff2");
+  font-display: auto;
   font-weight: 300;
   font-style: normal;
 }
