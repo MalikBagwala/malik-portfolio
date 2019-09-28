@@ -3,7 +3,6 @@ import styled from "styled-components"
 const Container = styled.div`
   width: 80%;
   margin: auto;
-
 `
 const TextHighlight = styled.span`
   font-weight: ${props => (props.bold ? "bold" : "lighter")};
@@ -12,7 +11,4 @@ const TextHighlight = styled.span`
   font-style: ${props => (props.style ? props.style : "normal")};
 `
 
-const TitleHeader = () => {
-  
-}
 export { Container, TextHighlight }

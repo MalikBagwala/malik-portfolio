@@ -28,6 +28,9 @@ const Work = () => {
           node {
             contentful_id
             title
+            note {
+              json
+            }
             description {
               json
             }
