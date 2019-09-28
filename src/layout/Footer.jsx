@@ -19,7 +19,7 @@ const FooterWrapper = styled(Container)`
 
 const P = styled.p`
   font-size: 1.4rem;
-  color: var(--gray-500);
+  color: var(--gray-600);
   text-align: center;
   @media ${props => props.theme.mediaQueries.larger} {
     text-align: center;
@@ -34,23 +34,13 @@ const LinksContainer = styled.div`
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  /* width: 15%;
-
-  @media ${props => props.theme.mediaQueries.larger} {
-    width: 20%;
-  }
-  @media ${props => props.theme.mediaQueries.medium} {
-    width: 30%;
-  }
-  @media ${props => props.theme.mediaQueries.small} {
-    width: 45%;
-  } */
 `
 
 const CopyRight = styled.div`
   height: 40px;
   width: 100%;
   background: var(--gray-100);
+  color: var(--gray-800);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -7,7 +7,7 @@ module.exports = {
       github: "https://github.com/MalikBagwala",
       gitlab: "https://gitlab.com/MalikBagwala",
       linkedin: "https://www.linkedin.com/in/malik-bagwala-b989b5185",
-      mail: "m.bagwala@outlook.com"
+      mail: "m.bagwala@outlook.com",
     },
   },
   plugins: [
@@ -18,6 +18,15 @@ module.exports = {
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#4e15a2`,
+        // Disable the loading spinner.
+        showSpinner: true,
       },
     },
     {

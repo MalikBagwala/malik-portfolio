@@ -3,8 +3,6 @@ import { useSpring, animated } from "react-spring"
 import styled from "styled-components"
 
 const ElevatedImg = styled(animated.img)`
-  width: 500px;
-  height: auto;
   border-radius: 5px;
   background-image: ${props => `url(${props.src})`};
   background-size: cover;
@@ -14,15 +12,6 @@ const ElevatedImg = styled(animated.img)`
   cursor: pointer;
   &:hover {
     box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
-  }
-  @media ${props => props.theme.mediaQueries.larger} {
-    width: 400px;
-  }
-  @media ${props => props.theme.mediaQueries.large} {
-    width: 300px;
-  }
-  @media ${props => props.theme.mediaQueries.medium} {
-    width: 100%;
   }
 `
 
@@ -42,6 +31,7 @@ const ElevatedImage = ({ src, ...otherProps }) => {
     <ElevatedImg
       {...otherProps}
       src={src}
+      loading="lazy"
       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
       style={{ transform: props.xys.interpolate(trans) }}
