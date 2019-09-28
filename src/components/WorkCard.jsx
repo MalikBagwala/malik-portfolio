@@ -1,13 +1,14 @@
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faLink } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { get } from "lodash"
 import React from "react"
+import styled from "styled-components"
+import ContentMarkdownNote from "../utils/contentful-markdown-note"
+import ContentMarkdownWork from "../utils/contentful-markdown-work"
 import ButtonLink from "./ButtonLink"
 import ElevatedImage from "./ElevatedImage"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLink } from "@fortawesome/free-solid-svg-icons"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
-import styled from "styled-components"
 
 const StyledIcon = styled(FontAwesomeIcon)`
   margin-right: 3px;
@@ -34,25 +35,20 @@ const H1 = styled.h1`
   color: var(--gray-800);
 `
 
-const P = styled.p`
-  color: var(--gray-500);
-  margin-top: 1.4rem;
-  line-height: 1.7;
-  font-size: 1.3rem;
-`
-
 const ButtonGroup = styled.div`
   margin-top: 2rem;
 `
 
-const WorkCard = ({ live, source, title, thumbnail, description }) => {
+const WorkCard = ({ live, source, title, thumbnail, description, note }) => {
   const src = thumbnail && get(thumbnail, "fixed.src")
+  console.log(note)
   return (
     <WorkCardWrapper>
       <ElevatedImage src={src} />
       <Content>
         <H1>{title}</H1>
-        <P>{documentToReactComponents(description.json)}</P>
+        <ContentMarkdownWork content={description.json} />
+        {note && <ContentMarkdownNote content={note.json} />}
         <ButtonGroup>
           <ButtonLink
             href={live}
