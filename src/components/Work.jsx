@@ -13,6 +13,10 @@ const WorkWrapper = styled.div`
   }
 `
 const WorkContainer = styled(Container)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 6rem 0;
 `
 
