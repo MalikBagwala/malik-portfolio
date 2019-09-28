@@ -4,6 +4,7 @@ import ProfileImage from "./ProfileImage"
 import AnimatedIcon from "./AnimatedIcon"
 import styled from "styled-components"
 import { Container, TextHighlight } from "../utils/styledComponents"
+import { useSpring, animated, config } from "react-spring"
 const Background = styled.div`
   width: 100%;
   height: 100vh;
@@ -39,7 +40,7 @@ const TextContainer = styled.div`
   }
 `
 
-const H1 = styled.h1`
+const H1 = styled(animated.h1)`
   font-size: 8rem;
   font-weight: lighter;
   @media ${props => props.theme.mediaQueries.larger} {
@@ -53,7 +54,7 @@ const H1 = styled.h1`
   }
 `
 
-const P = styled.p`
+const P = styled(animated.p)`
   font-size: 1.8rem;
 `
 
@@ -70,21 +71,45 @@ const ProfileImageContainer = styled.div`
 `
 
 const Hero = () => {
+  const TitleSpring = useSpring({
+    config: config.molasses,
+    delay: 200,
+    opacity: 1,
+    transform: "translateX(0px)",
+    from: { opacity: 0, transform: "translateX(40px)" },
+  })
+
+  // Sub title animation
+  const SubTitleSpring = useSpring({
+    config: config.stiff,
+    delay: 300,
+    opacity: 1,
+    transform: "translateY(0px)",
+    from: { opacity: 0, transform: "translateY(40px)" },
+  })
+
+  // Button animation
+  const ButtonSpring = useSpring({
+    config: config.stiff,
+    delay: 600,
+    opacity: 1,
+    from: { opacity: 0 },
+  })
   return (
     <Background>
       <HeroContainer>
         <Flex>
           <TextContainer>
-            <H1>
+            <H1 style={TitleSpring}>
               Hey <AnimatedIcon />
               <br />
               I'm
               <TextHighlight bold> Malik</TextHighlight>
             </H1>
-            <P>
+            <P style={SubTitleSpring}>
               A <TextHighlight>Designgineer</TextHighlight>
             </P>
-            <AboutMe>About Me</AboutMe>
+            <AboutMe style={ButtonSpring}>About Me</AboutMe>
           </TextContainer>
           <ProfileImageContainer>
             <ProfileImage />

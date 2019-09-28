@@ -1,6 +1,6 @@
 import styled from "styled-components"
-
-const Button = styled.button`
+import { animated } from "react-spring"
+const Button = styled(animated.button)`
   padding: ${props => (props.card ? "0.7rem 2rem" : "1.2rem 3.3rem")};
   align-self: ${props => (props.center ? "center" : "start")};
   background-image: ${props =>

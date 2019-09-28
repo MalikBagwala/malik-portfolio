@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
-
+import { Spring, config } from "react-spring/renderprops"
 const StyledImage = styled(Img)`
   border: 1rem solid var(--yellow-color);
   border-radius: 10px;
@@ -20,11 +20,23 @@ const ProfileImage = () => {
     }
   `)
   return (
-    <StyledImage
-      fluid={data.contentfulAsset.fluid}
-      objectFit="cover"
-      objectPosition="50% 50%"
-    ></StyledImage>
+    <Spring
+      from={{
+        opacity: 0,
+        transform: "translateY(100px)",
+        config: config.wobbly,
+      }}
+      to={{ opacity: 1, transform: "translateY(0px)" }}
+    >
+      {props => (
+        <StyledImage
+          style={props}
+          fluid={data.contentfulAsset.fluid}
+          objectFit="cover"
+          objectPosition="50% 50%"
+        ></StyledImage>
+      )}
+    </Spring>
   )
 }
 
