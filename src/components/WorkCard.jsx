@@ -65,7 +65,7 @@ const WorkCard = ({ live, source, title, thumbnail, description, note }) => {
   console.log(note)
   return (
     <WorkCardWrapper>
-      <ElevatedImage src={src} />
+      <ElevatedImage src={src} alt={`${title} - Thumbnail`} />
       <Content>
         <H1>{title}</H1>
         <ContentMarkdownWork content={description.json} />

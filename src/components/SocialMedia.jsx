@@ -67,22 +67,18 @@ const SocialMedia = () => {
     "site.siteMetadata.socialMedia",
     {}
   )
-  // github: "https://github.com/MalikBagwala",
-  // gitlab: "https://gitlab.com/MalikBagwala",
-  // linkedin: "https://www.linkedin.com/in/malik-bagwala-b989b5185",
-  // mail: "m.bagwala@outlook.com"
   return (
     <>
-      <A href={`mailto:${mail}`}>
+      <A href={`mailto:${mail}`} aria-label="Contact Me Via Mail">
         <StyledIcon icon={faEnvelope} />
       </A>
-      <A href={github}>
+      <A href={github} aria-label="Take a look at my github portfolio">
         <StyledIcon icon={faGithub} />
       </A>
-      <A href={gitlab}>
+      <A href={gitlab} aria-label="Take a look at my gitlab portfolio">
         <StyledIcon icon={faGitlab} />
       </A>
-      <A href={linkedin}>
+      <A href={linkedin} aria-label="Connect with me on linkedin">
         <StyledIcon icon={faLinkedin} />
       </A>
     </>
