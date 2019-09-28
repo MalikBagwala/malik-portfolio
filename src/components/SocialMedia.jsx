@@ -11,6 +11,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { get } from "lodash"
 const A = styled.a`
   background: var(--gray-100);
+  margin: 0 0.5rem;
   height: 48px;
   width: 48px;
   border-radius: 50%;

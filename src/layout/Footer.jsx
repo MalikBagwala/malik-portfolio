@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import SocialMedia from "../components/SocialMedia"
+import { Container } from "../utils/styledComponents"
 
 const H1 = styled.h1`
   margin-bottom: 1.3rem;
@@ -8,29 +9,24 @@ const H1 = styled.h1`
   text-align: center;
 `
 
-const FooterWrapper = styled.footer`
+const FooterWrapper = styled(Container)`
   height: 400px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  .social {
-    margin: 1rem 0;
-  }
-  img {
-    margin: 0 0.9rem;
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
 `
 
 const P = styled.p`
   font-size: 1.4rem;
   color: var(--gray-500);
+  text-align: center;
+  @media ${props => props.theme.mediaQueries.larger} {
+    text-align: center;
+  }
+  @media ${props => props.theme.mediaQueries.medium} {
+    font-size: 1.2rem;
+  }
 `
 
 const LinksContainer = styled.div`
@@ -38,7 +34,7 @@ const LinksContainer = styled.div`
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  width: 15%;
+  /* width: 15%;
 
   @media ${props => props.theme.mediaQueries.larger} {
     width: 20%;
@@ -48,7 +44,7 @@ const LinksContainer = styled.div`
   }
   @media ${props => props.theme.mediaQueries.small} {
     width: 45%;
-  }
+  } */
 `
 
 const CopyRight = styled.div`

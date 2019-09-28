@@ -9,7 +9,6 @@ import ContentMarkdownWork from "../utils/contentful-markdown-work"
 import ButtonLink from "./ButtonLink"
 import ElevatedImage from "./ElevatedImage"
 
-
 const StyledIcon = styled(FontAwesomeIcon)`
   margin-right: 3px;
 `
@@ -20,11 +19,33 @@ const WorkCardWrapper = styled.div`
   height: 100%;
   background: white;
   display: flex;
+  @media ${props => props.theme.mediaQueries.large} {
+    margin: 3rem 0px;
+  }
+
+  @media ${props => props.theme.mediaQueries.medium} {
+    margin: 2.5rem 0px;
+    flex-direction: column;
+  }
+  @media ${props => props.theme.mediaQueries.small} {
+    margin: 2rem 0px;
+  }
 `
 
 const Content = styled.div`
   padding: 3rem;
-  width: 50%;
+
+  @media ${props => props.theme.mediaQueries.large} {
+    padding: 2.5rem;
+  }
+  @media ${props => props.theme.mediaQueries.medium} {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  @media ${props => props.theme.mediaQueries.small} {
+    padding: 1.5rem;
+    flex-direction: column;
+  }
 `
 
 const H1 = styled.h1`

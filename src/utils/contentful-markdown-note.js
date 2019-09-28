@@ -7,6 +7,10 @@ const P = styled.p`
   margin-top: 1.4rem;
   line-height: 1.7;
   font-size: 0.9rem;
+  @media ${props => props.theme.mediaQueries.medium} {
+    font-size: 0.8rem;
+    margin-top: 1.2rem;
+  }
 `
 
 const A = styled.a`

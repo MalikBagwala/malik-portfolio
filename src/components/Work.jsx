@@ -8,9 +8,6 @@ import { Container } from "../utils/styledComponents"
 
 const WorkWrapper = styled.div`
   background: var(--gray-100);
-  .container {
-    padding: 6rem 0;
-  }
 `
 const WorkContainer = styled(Container)`
   display: flex;
@@ -18,6 +15,15 @@ const WorkContainer = styled(Container)`
   align-items: center;
   flex-direction: column;
   padding: 6rem 0;
+  @media ${props => props.theme.mediaQueries.large} {
+    padding: 4.5rem 0;
+  }
+  @media ${props => props.theme.mediaQueries.medium} {
+    padding: 3rem 0;
+  }
+  @media ${props => props.theme.mediaQueries.small} {
+    padding: 2rem 0;
+  }
 `
 
 const Work = () => {

@@ -5,6 +5,8 @@ import AnimatedIcon from "./AnimatedIcon"
 import styled from "styled-components"
 import { Container, TextHighlight } from "../utils/styledComponents"
 import { useSpring, animated, config } from "react-spring"
+import ButtonLink from "./ButtonLink"
+import { Link } from "react-scroll"
 const Background = styled.div`
   width: 100%;
   height: 100vh;
@@ -109,7 +111,16 @@ const Hero = () => {
             <P style={SubTitleSpring}>
               A <TextHighlight>Designgineer</TextHighlight>
             </P>
-            <AboutMe style={ButtonSpring}>About Me</AboutMe>
+            <Link
+              to="about"
+              activeClass="link-active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <AboutMe style={ButtonSpring}>About Me</AboutMe>
+            </Link>
           </TextContainer>
           <ProfileImageContainer>
             <ProfileImage />

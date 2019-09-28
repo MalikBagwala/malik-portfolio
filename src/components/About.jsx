@@ -7,6 +7,15 @@ import SectionHeader from "./SectionHeader"
 const Div = styled.div``
 const AboutContainer = styled(Container)`
   padding: 6rem 0;
+  @media ${props => props.theme.mediaQueries.large} {
+    padding: 4.5rem 0;
+  }
+  @media ${props => props.theme.mediaQueries.medium} {
+    padding: 3rem 0;
+  }
+  @media ${props => props.theme.mediaQueries.small} {
+    padding: 2rem 0;
+  }
 `
 
 const TitleContent = styled.div`
@@ -18,6 +27,16 @@ const TitleContent = styled.div`
 
 const Content = styled.div`
   padding: 1rem 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @media ${props => props.theme.mediaQueries.large} {
+    padding: 1rem 5.5rem;
+  }
+  @media ${props => props.theme.mediaQueries.medium} {
+    padding: 1rem 0;
+  }
 `
 const P = styled.p`
   color: var(--gray-600);
@@ -25,13 +44,24 @@ const P = styled.p`
   line-height: 1.7;
   font-size: 1.4rem;
   text-align: justify;
+
+  @media ${props => props.theme.mediaQueries.medium} {
+    text-align: left;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
 `
 
 const SkillStack = styled(P)`
   text-transform: uppercase;
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: 700;
   color: var(--purple-color);
+  @media ${props => props.theme.mediaQueries.medium} {
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
 `
 const Highlight = styled.span`
   font-weight: normal;

@@ -12,6 +12,9 @@ const H2 = styled.h2`
   font-weight: lighter;
   font-size: 2.5rem;
   text-align: center;
+  @media ${props => props.theme.mediaQueries.medium} {
+    font-size: 2rem;
+  }
 `
 
 const HR = styled.hr`
