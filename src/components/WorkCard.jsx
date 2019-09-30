@@ -21,6 +21,7 @@ const WorkCardWrapper = styled.div`
   width: 100%;
   @media ${props => props.theme.mediaQueries.medium} {
     flex-direction: column !important;
+    margin: 2rem 0px;
   }
 `
 
@@ -48,6 +49,9 @@ const H1 = styled.h1`
   font-size: 1.3rem;
   font-weight: bold;
   color: var(--gray-800);
+  @media ${props => props.theme.mediaQueries.medium} {
+    font-size: 1.1rem;
+  }
 `
 
 const ButtonGroup = styled.div`

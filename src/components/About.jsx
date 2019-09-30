@@ -47,8 +47,8 @@ const P = styled.p`
 
   @media ${props => props.theme.mediaQueries.medium} {
     text-align: left;
-    margin-top: 1.5rem;
-    font-size: 1.2rem;
+    margin-top: 1.4rem;
+    font-size: 1rem;
     line-height: 1.7;
   }
 `
@@ -65,9 +65,7 @@ const SkillStack = styled(P)`
 `
 const Highlight = styled.span`
   font-weight: normal;
-  font-size: 1.4rem;
   font-weight: bold;
-  color: var(--gray-800);
 `
 
 const About = () => {

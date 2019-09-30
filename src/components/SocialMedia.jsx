@@ -38,13 +38,13 @@ const StyledIcon = styled(FontAwesomeIcon)`
     color: white;
   }
   @media ${props => props.theme.mediaQueries.medium} {
-    font-size: 1.4rem;
-  }
-  @media ${props => props.theme.mediaQueries.small} {
     font-size: 1.3rem;
   }
+  @media ${props => props.theme.mediaQueries.small} {
+    font-size: 1.2rem;
+  }
   @media ${props => props.theme.mediaQueries.smaller} {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 `
 const SocialMedia = () => {

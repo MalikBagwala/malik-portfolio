@@ -8,8 +8,8 @@ const P = styled.p`
   line-height: 1.7;
   font-size: 0.9rem;
   @media ${props => props.theme.mediaQueries.medium} {
-    font-size: 0.8rem;
-    margin-top: 1.2rem;
+    font-size: 0.7rem;
+    margin-top: 1rem;
   }
 `
 

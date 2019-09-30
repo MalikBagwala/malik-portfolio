@@ -7,6 +7,9 @@ const H1 = styled.h1`
   margin-bottom: 1.3rem;
   color: var(--gray-800);
   text-align: center;
+  @media ${props => props.theme.mediaQueries.medium} {
+    margin-bottom: 1.1rem;
+  }
 `
 
 const FooterWrapper = styled(Container)`
@@ -15,6 +18,12 @@ const FooterWrapper = styled(Container)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media ${props => props.theme.mediaQueries.larger} {
+    height: 350px;
+  }
+  @media ${props => props.theme.mediaQueries.medium} {
+    height: 200px;
+  }
 `
 
 const P = styled.p`
@@ -25,7 +34,7 @@ const P = styled.p`
     text-align: center;
   }
   @media ${props => props.theme.mediaQueries.medium} {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 `
 
