@@ -52,7 +52,7 @@ const H1 = styled(animated.h1)`
     font-size: 6rem;
   }
   @media ${props => props.theme.mediaQueries.medium} {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 `
 

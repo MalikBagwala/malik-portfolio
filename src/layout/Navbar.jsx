@@ -38,18 +38,13 @@ const Nav = styled.nav`
   }
   @media ${props => props.theme.mediaQueries.medium} {
     bottom: 0;
-    height: 75px;
+    height: 50px;
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.6),
       0 1px 3px 1px rgba(60, 64, 67, 0.3);
     backdrop-filter: blur(15px);
     background: rgba(255, 255, 255, 0.8);
     ${StyledLink} {
-      font-size: 1.1rem;
-    }
-  }
-  @media ${props => props.theme.mediaQueries.small} {
-    ${StyledLink} {
-      font-size: 0.95rem;
+      font-size: 0.8rem;
     }
   }
 `

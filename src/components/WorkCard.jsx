@@ -7,8 +7,7 @@ import styled from "styled-components"
 import ContentMarkdownNote from "../utils/contentful-markdown-note"
 import ContentMarkdownWork from "../utils/contentful-markdown-work"
 import ButtonLink from "./ButtonLink"
-import ElevatedImage from "./ElevatedImage"
-
+import Img from "gatsby-image"
 const StyledIcon = styled(FontAwesomeIcon)`
   margin-right: 3px;
 `
@@ -16,35 +15,30 @@ const StyledIcon = styled(FontAwesomeIcon)`
 const WorkCardWrapper = styled.div`
   margin: 3.5rem 0px;
   width: 100%;
-  height: 100%;
   background: white;
   display: flex;
-  @media ${props => props.theme.mediaQueries.large} {
-    margin: 3rem 0px;
-  }
-
+  align-items: center;
+  width: 100%;
   @media ${props => props.theme.mediaQueries.medium} {
-    margin: 2.5rem 0px;
-    flex-direction: column;
-  }
-  @media ${props => props.theme.mediaQueries.small} {
-    margin: 2rem 0px;
+    flex-direction: column !important;
   }
 `
 
 const Content = styled.div`
+  display: flex;
+  flex: 1 1 50%;
+  flex-direction: column;
+  margin: 0 2rem;
   padding: 3rem;
 
   @media ${props => props.theme.mediaQueries.large} {
     padding: 2.5rem;
   }
   @media ${props => props.theme.mediaQueries.medium} {
-    flex-direction: column;
-    padding: 2rem;
-  }
-  @media ${props => props.theme.mediaQueries.small} {
-    padding: 1.5rem;
-    flex-direction: column;
+    padding: 1.5rem 0rem;
+    order: 2;
+    align-items: center;
+    text-align: center;
   }
 `
 
@@ -59,13 +53,22 @@ const H1 = styled.h1`
 const ButtonGroup = styled.div`
   margin-top: 2rem;
 `
-
+const Image = styled(Img)`
+  margin: 0 2rem;
+  flex: 1 1 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  @media ${props => props.theme.mediaQueries.medium} {
+    order: 1;
+    width: 100%;
+    margin: 0rem;
+  }
+`
 const WorkCard = ({ live, source, title, thumbnail, description, note }) => {
-  const src = thumbnail && get(thumbnail, "fixed.src")
+  const fluid = thumbnail && get(thumbnail, "fluid")
   console.log(note)
   return (
     <WorkCardWrapper>
-      <ElevatedImage src={src} alt={`${title} - Thumbnail`} />
+      <Image fluid={fluid} alt={`Thumnail for - ${title}`} />
       <Content>
         <H1>{title}</H1>
         <ContentMarkdownWork content={description.json} />

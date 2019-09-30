@@ -35,5 +35,9 @@ const Button = styled(animated.button)`
         ? "rgba(101, 41, 255, 0.15) 0px 10px 20px"
         : "rgba(22, 22, 22, 0.5) 0px 0px 12rem 0px"};
   }
+  @media ${props => props.theme.mediaQueries.medium} {
+    font-size: 0.7rem;
+    padding: 0.6rem 1.8rem;
+  }
 `
 export default Button
