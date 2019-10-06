@@ -3,6 +3,12 @@ import styled from "styled-components"
 import { Link } from "react-scroll"
 import { Container } from "../utils/styledComponents"
 import { useTrail, animated, config } from "react-spring"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faHome,
+  faEnvelopeOpenText,
+  faLaptopCode,
+} from "@fortawesome/free-solid-svg-icons"
 const NavContainer = styled(Container)`
   height: 100%;
   display: flex;
@@ -15,9 +21,26 @@ const StyledLink = styled(Link)`
   text-transform: uppercase;
   font-size: 0.9rem;
   cursor: pointer;
+  @media ${props => props.theme.mediaQueries.medium} {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+`
+
+const StyledLinkBrand = styled(StyledLink)`
+  @media ${props => props.theme.mediaQueries.medium} {
+    display: none;
+  }
 `
 const Links = styled.div`
   display: flex;
+  @media ${props => props.theme.mediaQueries.medium} {
+    width: 100%;
+    justify-content: space-around;
+  }
 `
 const Nav = styled.nav`
   position: fixed;
@@ -38,28 +61,38 @@ const Nav = styled.nav`
   }
   @media ${props => props.theme.mediaQueries.medium} {
     bottom: 0;
-    height: 50px;
+    height: 55px;
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.6),
       0 1px 3px 1px rgba(60, 64, 67, 0.3);
-    backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.8);
-    ${StyledLink} {
-      font-size: 0.8rem;
-    }
+
+    background: rgba(255, 255, 255, 1);
   }
 `
+
+const LinkIcon = styled(FontAwesomeIcon)`
+  display: none;
+  @media ${props => props.theme.mediaQueries.medium} {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+  }
+`
+
 const sections = [
   {
     to: "about",
     text: "about",
+    icon: faHome,
   },
   {
     to: "work",
     text: "work",
+    icon: faLaptopCode,
   },
   {
     to: "contact",
     text: "contact",
+    icon: faEnvelopeOpenText,
   },
 ]
 const Navbar = () => {
@@ -78,7 +111,7 @@ const Navbar = () => {
   return (
     <Nav>
       <NavContainer>
-        <StyledLink to="/">Malik</StyledLink>
+        <StyledLinkBrand to="/">Malik</StyledLinkBrand>
         <Links>
           {navItemsTrail.map((propStyles, index) => (
             <animated.span key={sections.to} style={propStyles}>
@@ -91,6 +124,7 @@ const Navbar = () => {
                 duration={500}
               >
                 {sections[index].text}
+                <LinkIcon icon={sections[index].icon} />
               </StyledLink>
             </animated.span>
           ))}
