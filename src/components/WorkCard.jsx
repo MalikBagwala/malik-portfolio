@@ -69,7 +69,6 @@ const Image = styled(Img)`
 `
 const WorkCard = ({ live, source, title, thumbnail, description, note }) => {
   const fluid = thumbnail && get(thumbnail, "fluid")
-  console.log(note)
   return (
     <WorkCardWrapper>
       <Image fluid={fluid} alt={`Thumnail for - ${title}`} />
