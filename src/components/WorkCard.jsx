@@ -78,15 +78,10 @@ const WorkCard = ({ live, source, title, thumbnail, description, note }) => {
         <ContentMarkdownWork content={description.json} />
         {note && <ContentMarkdownNote content={note.json} />}
         <ButtonGroup>
-          <ButtonLink
-            href={live}
-            card={true}
-            style={{ marginRight: 30 }}
-            purple
-          >
+          <ButtonLink href={live} style={{ marginRight: 30 }} card purple>
             <StyledIcon icon={faLink} /> Live
           </ButtonLink>
-          <ButtonLink href={source} card={true} purple>
+          <ButtonLink href={source} card purple>
             <StyledIcon icon={faGithub} /> Source
           </ButtonLink>
         </ButtonGroup>

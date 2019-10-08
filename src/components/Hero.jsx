@@ -1,12 +1,11 @@
 import React from "react"
-import Button from "./Button"
-import ProfileImage from "./ProfileImage"
-import AnimatedIcon from "./AnimatedIcon"
+import { Link } from "react-scroll"
+import { animated, config, useSpring } from "react-spring"
 import styled from "styled-components"
 import { Container, TextHighlight } from "../utils/styledComponents"
-import { useSpring, animated, config } from "react-spring"
-import ButtonLink from "./ButtonLink"
-import { Link } from "react-scroll"
+import AnimatedIcon from "./AnimatedIcon"
+import Button from "./Button"
+import ProfileImage from "./ProfileImage"
 const Background = styled.div`
   width: 100%;
   height: 100vh;

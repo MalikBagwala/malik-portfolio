@@ -114,7 +114,7 @@ const Navbar = () => {
         <StyledLinkBrand to="/">Malik</StyledLinkBrand>
         <Links>
           {navItemsTrail.map((propStyles, index) => (
-            <animated.span key={sections.to} style={propStyles}>
+            <animated.span key={sections[index].to} style={propStyles}>
               <StyledLink
                 to={sections[index].to}
                 activeClass="link-active"

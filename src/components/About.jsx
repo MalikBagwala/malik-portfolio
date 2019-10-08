@@ -84,8 +84,8 @@ const About = () => {
               bachelor's degree in <Highlight>computer science</Highlight>. I
               like exploring newer and better software engineering paradigms and
               to be completly honest, I do get excited about new frameworks{" "}
-              <Emoji>😆</Emoji>, So here are a few of my projects that are built
-              using <Highlight>bleeding edge </Highlight>
+              <Emoji label="Weird">😆</Emoji>, So here are a few of my projects
+              that are built using <Highlight>bleeding edge </Highlight>
               frameworks and technologies. My skill stack includes but is not
               limited to,
             </P>

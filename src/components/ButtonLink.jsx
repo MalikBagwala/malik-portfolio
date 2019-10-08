@@ -6,10 +6,20 @@ const Link = styled.a`
   /* ... */
 `
 
-const ButtonLink = ({ href, target, linkProps, children, ...otherProps }) => {
+const ButtonLink = ({
+  href,
+  target,
+  linkProps,
+  children,
+  purple,
+  card,
+  ...otherProps
+}) => {
   return (
     <Link href={href} target={target} {...linkProps}>
-      <Button {...otherProps}>{children}</Button>
+      <Button card={card.toString()} purple={purple.toString()} {...otherProps}>
+        {children}
+      </Button>
     </Link>
   )
 }
