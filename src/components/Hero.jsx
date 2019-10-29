@@ -6,6 +6,7 @@ import { Container, TextHighlight } from "../utils/styledComponents"
 import AnimatedIcon from "./AnimatedIcon"
 import Button from "./Button"
 import ProfileImage from "./ProfileImage"
+import AnimatedWords from "./AnimatedWords"
 const Background = styled.div`
   width: 100%;
   height: 100vh;
@@ -57,6 +58,7 @@ const H1 = styled(animated.h1)`
 
 const P = styled(animated.p)`
   font-size: 1.8rem;
+  margin-bottom: 3rem;
 `
 
 const AboutMe = styled(Button)`
@@ -108,8 +110,13 @@ const Hero = () => {
               <TextHighlight bold> Malik</TextHighlight>
             </H1>
             <P style={SubTitleSpring}>
-              A <TextHighlight>Designgineer</TextHighlight>
+              <TextHighlight>
+                <AnimatedWords>
+                  Designgineer
+                </AnimatedWords>
+              </TextHighlight>
             </P>
+
             <Link
               to="about"
               activeClass="link-active"
