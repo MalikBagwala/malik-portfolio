@@ -45,7 +45,7 @@ const Work = () => {
             thumbnail {
               contentful_id
               fluid(maxWidth: 800, quality: 80) {
-                ...GatsbyContentfulFluid_tracedSVG
+                ...GatsbyContentfulFluid_withWebp
               }
             }
           }
