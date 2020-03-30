@@ -37,6 +37,7 @@ const Content = styled.div`
   }
   @media ${props => props.theme.mediaQueries.medium} {
     padding: 1.5rem 0rem;
+    margin: 0 1.5rem;
     order: 2;
     align-items: center;
     text-align: center;
@@ -56,6 +57,7 @@ const H1 = styled.h1`
 
 const ButtonGroup = styled.div`
   margin-top: 2rem;
+  width: 100%;
 `
 const Image = styled(Img)`
   margin: 0 2rem;
@@ -65,6 +67,13 @@ const Image = styled(Img)`
     order: 1;
     width: 100%;
     margin: 0rem;
+  }
+`
+
+const LinkButtons = styled(ButtonLink)`
+  margin-right: 30px;
+  @media ${props => props.theme.mediaQueries.medium} {
+    margin-right: 10px;
   }
 `
 const WorkCard = ({ live, source, title, thumbnail, description, note }) => {
@@ -77,12 +86,12 @@ const WorkCard = ({ live, source, title, thumbnail, description, note }) => {
         <ContentMarkdownWork content={description.json} />
         {note && <ContentMarkdownNote content={note.json} />}
         <ButtonGroup>
-          <ButtonLink href={live} style={{ marginRight: 30 }} card purple>
+          <LinkButtons href={live} card purple>
             <StyledIcon icon={faLink} /> Live
-          </ButtonLink>
-          <ButtonLink href={source} card purple>
+          </LinkButtons>
+          <LinkButtons href={source} card purple>
             <StyledIcon icon={faGithub} /> Source
-          </ButtonLink>
+          </LinkButtons>
         </ButtonGroup>
       </Content>
     </WorkCardWrapper>

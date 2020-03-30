@@ -22,7 +22,7 @@ const FooterWrapper = styled(Container)`
     height: 350px;
   }
   @media ${props => props.theme.mediaQueries.medium} {
-    height: 200px;
+    height: 250px;
   }
 `
 

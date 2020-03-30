@@ -73,7 +73,7 @@ const LinkIcon = styled(FontAwesomeIcon)`
   display: none;
   @media ${props => props.theme.mediaQueries.medium} {
     display: block;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 0.2rem;
   }
 `
