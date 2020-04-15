@@ -1,7 +1,7 @@
 name: Deploy Gatsby Site to AWS S3
 on:
   push:
-    branches: [deploy]
+    branches: [master]
 
 jobs:
   deploy:
@@ -11,11 +11,14 @@ jobs:
       - uses: actions/setup-node@master
         with:
           node-version: 12
+        name: Install Dependencies
       - run: yarn install
+        name: Setup a production build
       - run: yarn build:prod
         env:
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+        name: Deploy the public/ folder to Amazon S3
       - uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --delete
