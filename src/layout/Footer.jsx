@@ -64,7 +64,7 @@ const Footer = () => {
     <>
       <FooterWrapper id="contact">
         <div>
-          <H1>Let's Work Together</H1>
+          <H1>Let's Work Togetherrr</H1>
           <P>
             I don't work for people, I collaborate with them. Sound like you?
             Let’s talk!
