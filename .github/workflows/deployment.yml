@@ -1,4 +1,8 @@
 name: Deploy Gatsby Site to AWS S3
+# Deployes the gatsby file to your own custom AWS S3 Bucket,
+# Make sure to add appropriate aws secrets
+# repository -> settings -> secrets
+
 on:
   push:
     branches: [master]
