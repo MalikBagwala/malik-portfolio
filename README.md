@@ -2,7 +2,7 @@
 
 <hr>
 
-<a href="https://creative-malik.cc">
+<a href="https://malikbagwala.dev">
 <img src="https://github.com/MalikBagwala/creative-malik-portfolio/blob/master/static/images/creative-malik-portfolio.png"></a>
 
-<a href="https://creative-malik.cc"><h1> Check It Out Live!</a>
+<a href="https://malikbagwala.dev"><h1> Check It Out Live!</a>
