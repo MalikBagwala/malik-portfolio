@@ -8,7 +8,6 @@ import {
   faGitlab,
 } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
-import { get } from "lodash"
 const A = styled.a`
   background: var(--gray-100);
   margin: 0 0.5rem;
@@ -62,11 +61,9 @@ const SocialMedia = () => {
       }
     }
   `)
-  const { mail, github, gitlab, linkedin } = get(
-    data,
-    "site.siteMetadata.socialMedia",
-    {}
-  )
+  const { mail, github, gitlab, linkedin } =
+    data && data.site.siteMetadata.socialMedia
+
   return (
     <>
       <A href={`mailto:${mail}`} aria-label="Contact Me Via Mail">

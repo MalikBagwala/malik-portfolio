@@ -1,3 +1,6 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: `Malik | Front-end Developer`,
@@ -12,21 +15,11 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        // Setting a color is optional.
-        color: `#4e15a2`,
-        // Disable the loading spinner.
-        showSpinner: true,
       },
     },
     {

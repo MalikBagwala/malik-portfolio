@@ -18,7 +18,7 @@ jobs:
         name: Install Dependencies
       - run: yarn install
         name: Setup a production build
-      - run: yarn build:prod
+      - run: yarn build
         env:
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}

@@ -1,5 +1,4 @@
 import { graphql, useStaticQuery } from "gatsby"
-import _ from "lodash"
 import React from "react"
 import WorkCard from "./WorkCard"
 import SectionHeader from "./SectionHeader"
@@ -53,15 +52,16 @@ const Work = () => {
       }
     }
   `)
-  const data = _.get(workData, "allContentfulWork.edges")
-  const works = _.map(data, data => data.node)
+  const works = workData && workData.allContentfulWork.edges
+
   return (
     <WorkWrapper id="work">
       <WorkContainer>
         <SectionHeader>Work</SectionHeader>
-        {works.map(work => {
-          return <WorkCard key={work.contentful_id} {...work}></WorkCard>
-        })}
+        {works &&
+          works.map(({ node: work }) => {
+            return <WorkCard key={work.contentful_id} {...work}></WorkCard>
+          })}
       </WorkContainer>
     </WorkWrapper>
   )

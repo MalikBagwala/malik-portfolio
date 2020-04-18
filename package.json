@@ -11,32 +11,25 @@
     "@fortawesome/free-brands-svg-icons": "^5.11.1",
     "@fortawesome/free-solid-svg-icons": "^5.11.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "env-cmd": "^10.0.1",
     "gatsby": "^2.15.9",
     "gatsby-image": "^2.2.17",
     "gatsby-plugin-manifest": "^2.2.14",
-    "gatsby-plugin-nprogress": "^2.1.9",
     "gatsby-plugin-offline": "^2.2.10",
     "gatsby-plugin-react-helmet": "^3.1.6",
-    "gatsby-plugin-sass": "^2.1.15",
     "gatsby-plugin-sharp": "^2.2.20",
     "gatsby-remark-images": "^3.1.21",
     "gatsby-source-contentful": "^2.1.40",
     "gatsby-source-filesystem": "^2.1.21",
     "gatsby-transformer-remark": "^2.6.22",
     "gatsby-transformer-sharp": "^2.2.13",
-    "lodash": "^4.17.15",
-    "node-sass": "^4.12.0",
-    "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-scroll": "^1.7.14",
     "react-spring": "^8.0.27",
-    "styled-components": "^4.3.2"
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
-    "prettier": "^1.18.2",
     "serve": "^11.1.0"
   },
   "keywords": [
@@ -50,12 +43,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build:prod": "gatsby build",
-    "build": "env-cmd -f .env gatsby build",
-    "develop": "env-cmd -f .env gatsby develop -o",
-    "develop:lan" :"env-cmd -f .env gatsby develop -H 0.0.0.0 -o",
+    "build": "gatsby build",
+    "start": "gatsby develop -o",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
     "serve": "gatsby serve -p 9000 -o",
     "dev": "yarn build && yarn serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""

@@ -16,22 +16,24 @@ const AnimatedIcon = () => {
 
   return transitions.map(({ item, key, props }) =>
     item ? (
+      // eslint-disable-next-line
       <Span
         role="img"
         key="hey"
         aria-label="Hello Emoji"
         style={props}
-        onClick={e => set(toggle => !toggle)}
+        onClick={(e) => set((toggle) => !toggle)}
       >
         ✌
       </Span>
     ) : (
+      // eslint-disable-next-line
       <Span
         key="cool"
         role="img"
         aria-label="Crossed Emoji"
         style={props}
-        onClick={e => set(toggle => !toggle)}
+        onClick={(e) => set((toggle) => !toggle)}
       >
         🤞
       </Span>

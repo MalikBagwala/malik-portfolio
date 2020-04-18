@@ -7,13 +7,13 @@ import SectionHeader from "./SectionHeader"
 const Div = styled.div``
 const AboutContainer = styled(Container)`
   padding: 6rem 0;
-  @media ${props => props.theme.mediaQueries.large} {
+  @media ${(props) => props.theme.mediaQueries.large} {
     padding: 4.5rem 0;
   }
-  @media ${props => props.theme.mediaQueries.medium} {
+  @media ${(props) => props.theme.mediaQueries.medium} {
     padding: 3rem 0;
   }
-  @media ${props => props.theme.mediaQueries.small} {
+  @media ${(props) => props.theme.mediaQueries.small} {
     padding: 2rem 0;
   }
 `
@@ -31,10 +31,10 @@ const Content = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  @media ${props => props.theme.mediaQueries.large} {
+  @media ${(props) => props.theme.mediaQueries.large} {
     padding: 1rem 5.5rem;
   }
-  @media ${props => props.theme.mediaQueries.medium} {
+  @media ${(props) => props.theme.mediaQueries.medium} {
     padding: 1rem 0;
   }
 `
@@ -45,7 +45,7 @@ const P = styled.p`
   font-size: 1.4rem;
   text-align: justify;
 
-  @media ${props => props.theme.mediaQueries.medium} {
+  @media ${(props) => props.theme.mediaQueries.medium} {
     text-align: left;
     margin-top: 1.4rem;
     font-size: 1rem;
@@ -58,7 +58,7 @@ const SkillStack = styled(P)`
   font-size: 1rem;
   font-weight: 700;
   color: var(--purple-color);
-  @media ${props => props.theme.mediaQueries.medium} {
+  @media ${(props) => props.theme.mediaQueries.medium} {
     font-size: 0.9rem;
     font-weight: 700;
   }
@@ -67,7 +67,7 @@ const Highlight = styled.span`
   font-weight: normal;
   font-weight: bold;
 `
-
+/* eslint-disable */
 const About = () => {
   return (
     <Div id="about">
