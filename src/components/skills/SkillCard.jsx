@@ -18,12 +18,21 @@ const Div = styled.div`
     color: white;
     /* box-shadow: var(--shadow-200); */
   }
+
+  @media ${(props) => props.theme.mediaQueries.medium} {
+    font-size: 14px;
+    height: 140px;
+  }
 `
 
 const IMG = styled.img`
   height: 60px;
   width: 60px;
   margin-top: 1rem;
+  @media ${(props) => props.theme.mediaQueries.medium} {
+    height: 40px;
+    width: 40px;
+  }
 `
 
 const SkillCard = ({ skill }) => {
