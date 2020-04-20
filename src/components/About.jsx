@@ -4,7 +4,9 @@ import { Container } from "../utils/styledComponents"
 import Emoji from "./Emoji"
 import SectionHeader from "./SectionHeader"
 
-const Div = styled.div``
+const Div = styled.div`
+  background: ${(props) => props.theme.colors.gray100};
+`
 const AboutContainer = styled(Container)`
   padding: 6rem 0;
   @media ${(props) => props.theme.mediaQueries.large} {

@@ -8,19 +8,19 @@ import { Container } from "../utils/styledComponents"
 const WorkWrapper = styled.div`
   background: var(--gray-100);
 `
-const WorkContainer = styled(Container)`
+export const WorkContainer = styled(Container)`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 6rem 0;
-  @media ${props => props.theme.mediaQueries.large} {
+  @media ${(props) => props.theme.mediaQueries.large} {
     padding: 4.5rem 0;
   }
-  @media ${props => props.theme.mediaQueries.medium} {
+  @media ${(props) => props.theme.mediaQueries.medium} {
     padding: 3rem 0;
   }
-  @media ${props => props.theme.mediaQueries.small} {
+  @media ${(props) => props.theme.mediaQueries.small} {
     padding: 2rem 0;
   }
 `
