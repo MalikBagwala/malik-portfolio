@@ -7,7 +7,7 @@ import ContentMarkdownNote from "../utils/contentful-markdown-note"
 import ContentMarkdownWork from "../utils/contentful-markdown-work"
 import ButtonLink from "./ButtonLink"
 import Img from "gatsby-image"
-const StyledIcon = styled(FontAwesomeIcon)`
+export const StyledIcon = styled(FontAwesomeIcon)`
   margin-right: 3px;
 `
 

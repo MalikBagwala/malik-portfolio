@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Container } from "../utils/styledComponents"
 import Emoji from "./Emoji"
 import SectionHeader from "./SectionHeader"
+import Resume from "./Resume"
 
 const Div = styled.div`
   background: ${(props) => props.theme.colors.gray100};
@@ -81,6 +82,7 @@ const About = () => {
               frameworks and technologies.
             </P>
           </Content>
+          <Resume />
         </TitleContent>
       </AboutContainer>
     </Div>
