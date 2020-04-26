@@ -16,9 +16,9 @@ const Grid = styled.div`
   width: 100%;
   row-gap: 30px;
   column-gap: 30px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   @media ${(props) => props.theme.mediaQueries.large} {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   @media ${(props) => props.theme.mediaQueries.medium} {
     grid-template-columns: repeat(2, 1fr);
@@ -58,7 +58,6 @@ const Skills = () => {
         <Grid>
           {skills &&
             skills.map(({ node }) => {
-              console.log(node)
               return <SkillCard key={node.contentful_id} skill={node} />
             })}
         </Grid>

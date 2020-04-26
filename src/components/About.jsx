@@ -55,16 +55,6 @@ const P = styled.p`
   }
 `
 
-const SkillStack = styled(P)`
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--purple-color);
-  @media ${(props) => props.theme.mediaQueries.medium} {
-    font-size: 0.9rem;
-    font-weight: 700;
-  }
-`
 const Highlight = styled.span`
   font-weight: normal;
   font-weight: bold;
@@ -91,10 +81,6 @@ const About = () => {
               frameworks and technologies. My skill stack includes but is not
               limited to,
             </P>
-            <SkillStack>
-              react - redux - firebase - graphql - apollo - mongodb - nodejs -
-              express -gatsby
-            </SkillStack>
           </Content>
         </TitleContent>
       </AboutContainer>
