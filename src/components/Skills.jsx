@@ -31,7 +31,7 @@ const Grid = styled.div`
 const Skills = () => {
   const skillsData = useStaticQuery(graphql`
     {
-      allContentfulTechnology {
+      allContentfulTechnology(sort: { fields: rating, order: DESC }) {
         edges {
           node {
             contentful_id
