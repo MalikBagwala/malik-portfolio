@@ -78,8 +78,7 @@ const About = () => {
               to be completly honest, I do get excited about new frameworks{" "}
               <Emoji label="Weird">😆</Emoji>, So here are a few of my projects
               that are built using <Highlight>bleeding edge </Highlight>
-              frameworks and technologies. My skill stack includes but is not
-              limited to,
+              frameworks and technologies.
             </P>
           </Content>
         </TitleContent>
