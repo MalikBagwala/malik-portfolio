@@ -1,4 +1,4 @@
-name: Upload Assets to AWS S3
+name: Upload Assets to AWS S3 new
 # Deployes all the static assets (documents, images) to your own custom AWS S3 Bucket,
 # Make sure to add appropriate aws secrets
 # repository -> settings -> secrets
