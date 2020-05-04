@@ -17,7 +17,7 @@ const Resume = () => {
   return (
     <ButtonLink
       target="__blank"
-      href={`${window ? window.location.href : `${url}/`}resume.pdf`}
+      href={`${url}/resume.pdf`}
       card={false}
       purple={true}
     >
