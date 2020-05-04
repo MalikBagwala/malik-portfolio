@@ -5,7 +5,8 @@ module.exports = {
   siteMetadata: {
     title: `Malik | Front-end Developer`,
     description: `Hello I'm Malik, a web developer specializing in front-end development from India`,
-    author: `@gatsbyjs`,
+    author: `@MalikBagwala`,
+    siteUrl: "https://malikbagwala.dev",
     socialMedia: {
       github: "https://github.com/MalikBagwala",
       gitlab: "https://gitlab.com/MalikBagwala",
@@ -15,6 +16,14 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-142564957-1",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+      },
+    },
     {
       resolve: `gatsby-source-contentful`,
       options: {
