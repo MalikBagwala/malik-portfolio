@@ -1,5 +1,5 @@
-name: Deploy Gatsby Site to AWS S3
-# Deployes the gatsby file to your own custom AWS S3 Bucket,
+name: Upload Assets to AWS S3
+# Deployes all the static assets (documents, images) to your own custom AWS S3 Bucket,
 # Make sure to add appropriate aws secrets
 # repository -> settings -> secrets
 
@@ -12,17 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: actions/setup-node@master
-        with:
-          node-version: 12
-        name: Install Dependencies
-      - run: yarn install
-        name: Setup a production build
-      - run: yarn build
-        env:
-          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-        name: Deploy the public/ folder to Amazon S3
+        name: Deploy the assets/ folder to Amazon S3
       - uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --delete
@@ -31,4 +21,6 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
-          SOURCE_DIR: "public/"
+          SOURCE_DIR: "assets/"
+
+          name: Upload Website
