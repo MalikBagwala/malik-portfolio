@@ -58,7 +58,7 @@ const P = styled.p`
 
 const Highlight = styled.span`
   font-weight: normal;
-  font-weight: bold;
+  font-weight: 500;
 `
 /* eslint-disable */
 const About = () => {

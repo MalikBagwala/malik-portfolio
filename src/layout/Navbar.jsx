@@ -17,11 +17,11 @@ const NavContainer = styled(Container)`
 `
 const StyledLink = styled(Link)`
   color: var(--gray-800);
-  font-weight: bold;
+  font-weight: 500;
   text-transform: uppercase;
   font-size: 0.9rem;
   cursor: pointer;
-  @media ${props => props.theme.mediaQueries.medium} {
+  @media ${(props) => props.theme.mediaQueries.medium} {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -31,13 +31,13 @@ const StyledLink = styled(Link)`
 `
 
 const StyledLinkBrand = styled(StyledLink)`
-  @media ${props => props.theme.mediaQueries.medium} {
+  @media ${(props) => props.theme.mediaQueries.medium} {
     display: none;
   }
 `
 const Links = styled.div`
   display: flex;
-  @media ${props => props.theme.mediaQueries.medium} {
+  @media ${(props) => props.theme.mediaQueries.medium} {
     width: 100%;
     justify-content: space-around;
   }
@@ -59,7 +59,7 @@ const Nav = styled.nav`
       color: var(--purple-color);
     }
   }
-  @media ${props => props.theme.mediaQueries.medium} {
+  @media ${(props) => props.theme.mediaQueries.medium} {
     bottom: 0;
     height: 55px;
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.6),
@@ -71,7 +71,7 @@ const Nav = styled.nav`
 
 const LinkIcon = styled(FontAwesomeIcon)`
   display: none;
-  @media ${props => props.theme.mediaQueries.medium} {
+  @media ${(props) => props.theme.mediaQueries.medium} {
     display: block;
     font-size: 1rem;
     margin-bottom: 0.2rem;

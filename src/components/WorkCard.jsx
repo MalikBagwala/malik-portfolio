@@ -47,7 +47,7 @@ const H1 = styled.h1`
   text-transform: uppercase;
   font-weight: lighter;
   font-size: 1.3rem;
-  font-weight: bold;
+  font-weight: 500;
   color: var(--gray-800);
   @media ${(props) => props.theme.mediaQueries.medium} {
     font-size: 1.1rem;

@@ -17,11 +17,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Gilroy, sans-serif;
 }
 
 body {
   overflow-x: hidden;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
 }
 a {
   text-decoration: none;

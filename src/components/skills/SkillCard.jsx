@@ -14,7 +14,7 @@ const Div = styled.div`
   transition: all 0.5s ease-in;
   cursor: pointer;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 500;
   &:hover {
     background: ${(props) => props.color};
     color: white;

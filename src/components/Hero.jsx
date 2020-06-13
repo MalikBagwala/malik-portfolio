@@ -14,7 +14,8 @@ const Background = styled.div`
 `
 const HeroContainer = styled(Container)`
   height: 100%;
-  @media ${props => props.theme.mediaQueries.large} {
+
+  @media ${(props) => props.theme.mediaQueries.large} {
     width: 90%;
   }
 `
@@ -23,8 +24,8 @@ const Flex = styled.div`
   height: 100%;
   justify-content: center;
   align-items: center;
-  font-family: ${props => props.theme.fonts.primary}, sans-serif;
-  @media ${props => props.theme.mediaQueries.medium} {
+  font-family: ${(props) => props.theme.fonts.primary}, sans-serif;
+  @media ${(props) => props.theme.mediaQueries.medium} {
     flex-direction: column-reverse;
     height: 100%;
   }
@@ -37,7 +38,7 @@ const TextContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   color: white;
-  @media ${props => props.theme.mediaQueries.medium} {
+  @media ${(props) => props.theme.mediaQueries.medium} {
     width: 100%;
   }
 `
@@ -45,13 +46,13 @@ const TextContainer = styled.div`
 const H1 = styled(animated.h1)`
   font-size: 8rem;
   font-weight: lighter;
-  @media ${props => props.theme.mediaQueries.larger} {
+  @media ${(props) => props.theme.mediaQueries.larger} {
     font-size: 7rem;
   }
-  @media ${props => props.theme.mediaQueries.large} {
+  @media ${(props) => props.theme.mediaQueries.large} {
     font-size: 6rem;
   }
-  @media ${props => props.theme.mediaQueries.medium} {
+  @media ${(props) => props.theme.mediaQueries.medium} {
     font-size: 4rem;
   }
 `
@@ -68,7 +69,7 @@ const AboutMe = styled(Button)`
 const ProfileImageContainer = styled.div`
   height: 400px;
   width: 400px;
-  @media ${props => props.theme.mediaQueries.medium} {
+  @media ${(props) => props.theme.mediaQueries.medium} {
     display: none;
   }
 `
@@ -111,9 +112,7 @@ const Hero = () => {
             </H1>
             <P style={SubTitleSpring}>
               <TextHighlight>
-                <AnimatedWords>
-                  Designgineer
-                </AnimatedWords>
+                <AnimatedWords>Designgineer</AnimatedWords>
               </TextHighlight>
             </P>
 

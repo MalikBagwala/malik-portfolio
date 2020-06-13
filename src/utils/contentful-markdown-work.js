@@ -7,9 +7,13 @@ const P = styled.p`
   margin-top: 1.4rem;
   line-height: 1.7;
   font-size: 1.2rem;
-  @media ${props => props.theme.mediaQueries.medium} {
+  @media ${(props) => props.theme.mediaQueries.medium} {
     font-size: 0.9rem !important;
     line-height: 1.6;
+  }
+  b {
+    font-weight: 500;
+    color: var(--gray-500);
   }
 `
 
@@ -25,8 +29,8 @@ const A = styled.a`
 const ContentMarkdownWork = ({ content }) => {
   const options = {
     renderNode: {
-      [BLOCKS.PARAGRAPH]: (node, children) => <P>{children}</P>,
-      [INLINES.HYPERLINK]: node => (
+      [BLOCKS.PARAGRAPH]: (_, children) => <P>{children}</P>,
+      [INLINES.HYPERLINK]: (node) => (
         <A target="__blank" href={node.data.uri}>
           {node.content[0].value}
         </A>

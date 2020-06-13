@@ -28,7 +28,7 @@ export const WorkContainer = styled(Container)`
 const Work = () => {
   const workData = useStaticQuery(graphql`
     {
-      allContentfulWork {
+      allContentfulWork(sort: { order: [DESC], fields: [updatedAt] }) {
         edges {
           node {
             contentful_id

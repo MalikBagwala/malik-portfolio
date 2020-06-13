@@ -1,9 +1,11 @@
 import styled from "styled-components"
 import { animated } from "react-spring"
 const Button = styled(animated.button)`
-  padding: ${props => (props.card ? "0.7rem 2rem" : "1.2rem 3.3rem")};
-  align-self: ${props => (props.center ? "center" : "start")};
-  background-image: ${props =>
+  font-family: Gilroy, sans-serif;
+  font-weight: 600 !important;
+  padding: ${(props) => (props.card ? "0.7rem 2rem" : "1.2rem 3.3rem")};
+  align-self: ${(props) => (props.center ? "center" : "start")};
+  background-image: ${(props) =>
     props.purple
       ? "linear-gradient( 88.7deg,  rgba(207,150,207,1) -2.4%, rgba(107,116,179,1) 102% )"
       : props.light
@@ -11,10 +13,10 @@ const Button = styled(animated.button)`
       : "linear-gradient(-60deg, #ffba00 0%, #ffdc00 100%)"};
 
   border-radius: 40px;
-  font-size: ${props => (props.card ? "0.9rem" : "1.3rem")};
+  font-size: ${(props) => (props.card ? "0.9rem" : "1.3rem")};
 
-  color: ${props => (props.purple ? "white" : "var(--purple-color)")};
-  font-weight: bold;
+  color: ${(props) => (props.purple ? "white" : "var(--purple-color)")};
+  font-weight: 500;
   box-shadow: rgba(101, 41, 255, 0.15) 0px 10px 20px;
   text-transform: uppercase;
   cursor: pointer;
@@ -22,7 +24,7 @@ const Button = styled(animated.button)`
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: ${props =>
+    box-shadow: ${(props) =>
       props.card
         ? "rgba(101, 41, 255, 0.15) 0px 10px 20px"
         : "rgba(22, 22, 22, 0.5) 0px 0px 12rem 0px"};
@@ -30,12 +32,12 @@ const Button = styled(animated.button)`
 
   &:active {
     transform: translateY(1px);
-    box-shadow: ${props =>
+    box-shadow: ${(props) =>
       props.card
         ? "rgba(101, 41, 255, 0.15) 0px 10px 20px"
         : "rgba(22, 22, 22, 0.5) 0px 0px 12rem 0px"};
   }
-  @media ${props => props.theme.mediaQueries.medium} {
+  @media ${(props) => props.theme.mediaQueries.medium} {
     font-size: 0.7rem;
     padding: 0.6rem 1.8rem;
   }
