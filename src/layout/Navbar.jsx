@@ -19,7 +19,7 @@ const StyledLink = styled(Link)`
   color: var(--gray-800);
   font-weight: 500;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   cursor: pointer;
   @media ${(props) => props.theme.mediaQueries.medium} {
     display: flex;
@@ -44,14 +44,16 @@ const Links = styled.div`
 `
 const Nav = styled.nav`
   position: fixed;
-  height: 60px;
-  background: rgba(255, 255, 255, 0.9);
+  height: 48px;
+  /* background: rgba(255, 255, 255, 0.9); */
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(255, 255, 255, 0.72);
   width: 100%;
   z-index: 10;
-  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
-    0 1px 3px 1px rgba(60, 64, 67, 0.149);
-  backdrop-filter: blur(10px);
-
+  /* box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
+    0 1px 3px 1px rgba(60, 64, 67, 0.149); */
+  border-bottom: 1px solid ${(props) => props.theme.colors.gray300};
+  /* backdrop-filter: blur(10px); */
   a {
     margin: 0px 0.5rem;
     transition: color 0.2s ease-in;

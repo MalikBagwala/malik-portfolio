@@ -68,7 +68,12 @@ const SkillCard = ({ skill }) => {
     return ratings
   }
   return (
-    <Div color={skill.color}>
+    <Div
+      onClick={() => {
+        window.open(skill.link, "__blank")
+      }}
+      color={skill.color}
+    >
       <P>{skill.name}</P>
       {/* <IMG alt={skill.name} color={skill.color} src={skill.logo.file.url} /> */}
       <IMG color={skill.color} src={skill.logo.file.url} />
