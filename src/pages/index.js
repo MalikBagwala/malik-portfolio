@@ -1,6 +1,4 @@
 import React, { useEffect } from "react"
-import { ThemeProvider } from "styled-components"
-import lightTheme from "../themes/lightTheme"
 import SEO from "../utils/seo"
 
 const IndexPage = () => {
@@ -20,12 +18,10 @@ const IndexPage = () => {
     return () => window.removeEventListener("resize", changeVhVariable)
   }, [])
   return (
-    <ThemeProvider theme={lightTheme}>
-      <section>
-        <SEO title="Portfolio Page" />
-        <h1> Hey guys</h1>
-      </section>
-    </ThemeProvider>
+    <section>
+      <SEO title="Portfolio Page" />
+      <h1> Hey guys</h1>
+    </section>
   )
 }
 
