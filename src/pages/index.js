@@ -20,7 +20,7 @@ const IndexPage = () => {
   return (
     <section>
       <SEO title="Portfolio Page" />
-      <h1> Hey guys</h1>
+      <h1 className="text-6xl"> Hey guys</h1>
     </section>
   )
 }
