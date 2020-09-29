@@ -5,22 +5,14 @@
   "version": "0.1.0",
   "author": "Malik Bagwala <m.bagwala@outlook.com>",
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^13.4.0",
-    "@contentful/rich-text-types": "^13.4.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.24",
-    "@fortawesome/free-brands-svg-icons": "^5.11.1",
-    "@fortawesome/free-solid-svg-icons": "^5.11.1",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.15.9",
     "gatsby-image": "^2.2.17",
     "gatsby-plugin-google-analytics": "^2.3.0",
     "gatsby-plugin-manifest": "^2.2.14",
     "gatsby-plugin-offline": "^2.2.10",
+    "gatsby-plugin-postcss": "^2.3.13",
     "gatsby-plugin-react-helmet": "^3.1.6",
     "gatsby-plugin-sharp": "^2.2.20",
-    "gatsby-plugin-styled-components": "^3.3.11",
-    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-images": "^3.1.21",
     "gatsby-source-contentful": "^2.1.40",
     "gatsby-source-filesystem": "^2.1.21",
@@ -29,10 +21,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
-    "react-inlinesvg": "^1.2.0",
-    "react-scroll": "^1.7.14",
-    "react-spring": "^8.0.27",
-    "styled-components": "^5.2.0"
+    "tailwindcss": "^1.8.10"
   },
   "devDependencies": {
     "serve": "^11.1.0"

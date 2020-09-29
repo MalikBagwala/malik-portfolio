@@ -1,4 +1,4 @@
-const theme = {
+export default {
   fonts: {
     primary: "Gilroy",
   },
@@ -22,5 +22,3 @@ const theme = {
     largest: "only screen and (max-width: 97em)",
   },
 }
-
-export default theme
