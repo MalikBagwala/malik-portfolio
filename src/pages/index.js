@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import Button from "../components/atoms/button/button.component"
 import SEO from "../utils/seo"
 
 const IndexPage = () => {
@@ -21,6 +22,7 @@ const IndexPage = () => {
     <section>
       <SEO title="Portfolio Page" />
       <h1 className="text-6xl bg-yellow-500"> Hey guys</h1>
+      <Button>Hey guys</Button>
     </section>
   )
 }
