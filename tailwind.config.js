@@ -6,6 +6,10 @@ module.exports = {
   purge: [],
   theme: {
     extend: {},
+    fontFamily: {
+      sans: ["Karla", "Arial", "sans-serif"],
+      display: ["SpaceGrotesque", "sans-serif"],
+    },
   },
   variants: {},
   plugins: [],
