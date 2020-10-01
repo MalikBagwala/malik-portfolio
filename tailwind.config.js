@@ -1,3 +1,4 @@
+const { colors } = require("tailwindcss/defaultTheme")
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
@@ -5,7 +6,14 @@ module.exports = {
   },
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        gray: {
+          ...colors.gray,
+          "100": "#f7f7f7",
+        },
+      },
+    },
     fontFamily: {
       sans: ["Karla", "Arial", "sans-serif"],
       display: ["SpaceGrotesque", "sans-serif"],
