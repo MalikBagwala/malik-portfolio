@@ -5,10 +5,13 @@ import { card } from "./work.module.css"
 import Img from "gatsby-image"
 const Work = ({ work }) => {
   return (
-    <div className={classNames("bg-white", card)}>
-      <div className="overflow-hidden" onClick={(e) => navigate(work.slug)}>
+    <div
+      onClick={(e) => navigate(work.slug)}
+      className={classNames("bg-white hover:shadow-lg cursor-pointer", card)}
+    >
+      <div className="overflow-hidden">
         <Img
-          className="w-auto cursor-pointer object-cover h-full"
+          className="w-auto object-cover h-full"
           fluid={work.thumbnail.fluid}
           alt="Sunset in the mountains"
         />
