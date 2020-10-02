@@ -5,22 +5,21 @@ import Section from "../section/section.component"
 import Tag from "../../atoms/tag/tag.component"
 import Button from "../../atoms/button/button.component"
 import Icon from "../../atoms/icon/icon.component"
+import Img from "gatsby-image"
 const WorkDetail = ({ data }) => {
   const work = data.contentfulWork
+  console.log(work)
   return (
     <Layout title={`Work | ${work.title}`}>
       <Section white={true} title={work.title} subtitle="title">
         <div className="flex">
           <div className="images w-2/3">
-            <img
+            <Img
               className="mb-8"
-              src="http://duruthemes.com/demo/html/addo/white/images/portfolio/08.jpg"
-              alt=""
+              fluid={work.thumbnail.fluid}
+              alt={work.title}
             />
-            <img
-              src="http://duruthemes.com/demo/html/addo/white/images/portfolio/08.jpg"
-              alt=""
-            />
+            <Img fluid={work.thumbnail.fluid} alt="" />
           </div>
           <div className="sticky top-auto flex flex-col overflow-hidden px-6 w-1/3">
             <div>
@@ -65,12 +64,19 @@ export default WorkDetail
 export const query = graphql`
   query contentfulWork($slug: String) {
     contentfulWork(slug: { eq: $slug }) {
-      id
       contentful_id
       slug
       title
       description {
         id
+      }
+      live
+      source
+      thumbnail {
+        contentful_id
+        fluid(maxWidth: 1920, quality: 80) {
+          ...GatsbyContentfulFluid_withWebp
+        }
       }
     }
   }

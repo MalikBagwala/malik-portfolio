@@ -4,11 +4,7 @@ exports.createPages = async function ({ actions, graphql }) {
       allContentfulWork {
         edges {
           node {
-            contentful_id
             slug
-            description {
-              id
-            }
           }
         }
       }
@@ -20,7 +16,7 @@ exports.createPages = async function ({ actions, graphql }) {
       path: slug,
       component: require.resolve(
         `./src/components/templates/work-detail/work-detail.component.jsx`
-    ),
+      ),
       context: { slug: slug },
     })
   })

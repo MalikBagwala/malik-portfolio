@@ -2,15 +2,16 @@ import { navigate } from "gatsby"
 import React from "react"
 import classNames from "../../../utils/classNames"
 import { card } from "./work.module.css"
+import Img from "gatsby-image"
 const Work = ({ work }) => {
   return (
     <div className={classNames("bg-white", card)}>
       <div className="overflow-hidden" onClick={(e) => navigate(work.slug)}>
-        <img
-          class="w-full transform hover:scale-150 cursor-pointer"
-          src="https://tailwindcss.com/img/card-top.jpg"
+        <Img
+          class="w-full transform hover:scale-150 cursor-pointer object-cover"
+          fluid={work.thumbnail.fluid}
           alt="Sunset in the mountains"
-        ></img>
+        />
       </div>
 
       <div className="p-4">

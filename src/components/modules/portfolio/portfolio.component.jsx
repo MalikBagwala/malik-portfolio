@@ -14,6 +14,14 @@ const Porfolio = () => {
             description {
               id
             }
+            live
+            source
+            thumbnail {
+              contentful_id
+              fluid(maxWidth: 800, quality: 80) {
+                ...GatsbyContentfulFluid_withWebp
+              }
+            }
           }
         }
       }
