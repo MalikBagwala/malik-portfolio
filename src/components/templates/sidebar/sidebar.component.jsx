@@ -1,26 +1,32 @@
 import React from "react"
 import classNames from "../../../utils/classNames"
-import { copyright, links, sidebar, title } from "./sidebar.module.css"
+import { copyright, links, sidebar, title, nav } from "./sidebar.module.css"
 import Icon from "../../atoms/icon/icon.component"
+import NavItem from "../../molecules/nav-item/nav-item.component"
 const Sidebar = () => {
   return (
     <header
       className={classNames(
-        "bg-white border-r-2 py-12 px-8 border-gray-200 h-full fixed flex flex-col justify-between top-0 left-0 overflow-y-hidden",
+        "bg-white shadow-lg py-12 px-8 h-full fixed flex flex-col justify-between top-0 left-0 overflow-y-hidden",
         sidebar
       )}
     >
-      <div
-        className={classNames(
-          "text-4xl font-display flex flex-col text-center",
-          title
-        )}
-      >
-        <span className="uppercase tracking-wider">Malik</span>
+      <div className={classNames("text-4xl flex flex-col text-center", title)}>
+        <span className="uppercase font-display tracking-wider">Malik</span>
         <span className="text-base text-gray-600 tracking-wide">
           front-end developer
         </span>
       </div>
+
+      <nav className={classNames(nav)}>
+        <ul>
+          <NavItem>Home</NavItem>
+          <NavItem>About</NavItem>
+          <NavItem>Work</NavItem>
+          <NavItem>Skills</NavItem>
+          <NavItem>Contact</NavItem>
+        </ul>
+      </nav>
       <div
         className={classNames(
           "flex flex-col justify-center align-baseline",
