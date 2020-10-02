@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
+import Porfolio from "../components/modules/portfolio/portfolio.component"
 import Layout from "../components/organisms/layout/layout.component"
-import Work from "../components/organisms/work/work.component"
-import Section from "../components/templates/section/section.component"
 
 const IndexPage = () => {
   // FIX FOR VH ON MOBILE
@@ -21,16 +20,7 @@ const IndexPage = () => {
   }, [])
   return (
     <Layout title="Home Page">
-      <Section>
-        <div className="grid grid-cols-3 gap-6">
-          <Work />
-          <Work />
-          <Work />
-          <Work />
-          <Work />
-          <Work />
-        </div>
-      </Section>
+      <Porfolio />
     </Layout>
   )
 }
