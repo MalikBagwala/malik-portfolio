@@ -5,11 +5,14 @@ const Footer = () => {
   return (
     <footer
       className={classNames(
-        "bg-white border-t-2 border-gray-200 text-gray-800 px-6 py-4",
+        "bg-gray-900 text-white px-12 py-20 flex justify-between",
         base
       )}
     >
-      Designed and Developed by Malik Bagwala {new Date().getFullYear()}
+      <div className="text-xs text-white">
+        &copy; {new Date().getFullYear()} MALIK. all rights reserved
+      </div>
+      <h1 className="text-3xl">Malik</h1>
     </footer>
   )
 }

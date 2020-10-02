@@ -4,7 +4,7 @@ import classNames from "../../../utils/classNames"
 import { card } from "./work.module.css"
 const Work = ({ work }) => {
   return (
-    <div className={classNames("bg-white overflow-hidden", card)}>
+    <div className={classNames("bg-white", card)}>
       <div className="overflow-hidden" onClick={() => navigate(work.slug)}>
         <img
           class="w-full transform hover:scale-150 cursor-pointer"

@@ -7,7 +7,7 @@ const Sidebar = () => {
   return (
     <header
       className={classNames(
-        "bg-white shadow-lg py-12 px-8 h-full fixed flex flex-col justify-between top-0 left-0 overflow-y-hidden",
+        "bg-white shadow-lg py-12 px-8 h-full fixed flex flex-col justify-between top-0 left-0",
         sidebar
       )}
     >
