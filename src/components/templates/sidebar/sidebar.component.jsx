@@ -3,6 +3,7 @@ import classNames from "../../../utils/classNames"
 import { copyright, links, sidebar, title, nav } from "./sidebar.module.css"
 import Icon from "../../atoms/icon/icon.component"
 import NavItem from "../../molecules/nav-item/nav-item.component"
+import Avatar from "../../molecules/avatar/avatar.component"
 const Sidebar = () => {
   return (
     <header
@@ -11,7 +12,13 @@ const Sidebar = () => {
         sidebar
       )}
     >
-      <div className={classNames("text-4xl flex flex-col text-center", title)}>
+      <div
+        className={classNames(
+          "text-4xl flex flex-col text-center items-center justify-center",
+          title
+        )}
+      >
+        <Avatar />
         <span className="uppercase font-display tracking-wider">Malik</span>
         <span className="text-base text-gray-600 tracking-wide">
           front-end developer
