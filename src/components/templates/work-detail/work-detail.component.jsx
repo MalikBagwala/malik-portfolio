@@ -15,11 +15,10 @@ const WorkDetail = ({ data }) => {
         <div className="flex">
           <div className="images w-2/3">
             <Img
-              className="mb-8"
+              className="mb-8 shadow"
               fluid={work.thumbnail.fluid}
               alt={work.title}
             />
-            <Img fluid={work.thumbnail.fluid} alt="" />
           </div>
           <div className="sticky top-auto flex flex-col overflow-hidden px-6 w-1/3">
             <div>
@@ -35,20 +34,18 @@ const WorkDetail = ({ data }) => {
                 doloribus fugit cupiditate ea ab porro eius maiores voluptas id
                 voluptatum consequatur soluta debitis ipsum, ipsa explicabo!
               </p>
-              <div className="mt-4 mb-10">
-                <Tag title="React" />
-                <Tag title="Redux" className="ml-2" />
-                <Tag title="GraphQL" className="ml-2" />
-                <Tag title="Django" className="ml-2" />
-                <Tag title="Apollo" className="ml-2" />
+              <div className="mt-4 mb-10 ">
+                {work.tags?.map((t) => (
+                  <Tag key={t.contentful_id} title={t.tagName} />
+                ))}
               </div>
             </div>
             <div className="flex">
-              <Button className="mr-4">
+              <Button href={work.live} target="__blank" as="a" className="mr-4">
                 <Icon name="globe" className="h-4 mr-2" />
                 Live
               </Button>
-              <Button>
+              <Button href={work.source} target="__blank" as="a">
                 <Icon name="code" className="h-4 mr-2" /> Code
               </Button>
             </div>
@@ -72,6 +69,10 @@ export const query = graphql`
       }
       live
       source
+      tags {
+        contentful_id
+        tagName
+      }
       thumbnail {
         contentful_id
         fluid(maxWidth: 1920, quality: 80) {

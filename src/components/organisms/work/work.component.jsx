@@ -8,7 +8,7 @@ const Work = ({ work }) => {
     <div className={classNames("bg-white", card)}>
       <div className="overflow-hidden" onClick={(e) => navigate(work.slug)}>
         <Img
-          class="w-full transform hover:scale-150 cursor-pointer object-cover"
+          className="w-auto cursor-pointer object-cover h-full"
           fluid={work.thumbnail.fluid}
           alt="Sunset in the mountains"
         />

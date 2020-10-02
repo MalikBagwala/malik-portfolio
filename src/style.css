@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
-@font-face {
-  font-family: SpaceGrotesque;
-  src: url(../src/fonts/SpaceGrotesk-Bold.otf);
+@import url("https://fonts.googleapis.com/css2?family=Karla&family=Rubik:wght@400;600;700&display=swap");
+
+body::-webkit-scrollbar {
+  display: none;
 }

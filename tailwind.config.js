@@ -16,7 +16,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ["Karla", "Arial", "sans-serif"],
-      display: ["SpaceGrotesque", "sans-serif"],
+      display: ["Rubik", "sans-serif"],
     },
   },
   variants: {},
