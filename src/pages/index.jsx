@@ -1,8 +1,7 @@
 import React, { useEffect } from "react"
-import Button from "../components/atoms/button/button.component"
 import Layout from "../components/organisms/layout/layout.component"
 import Work from "../components/organisms/work/work.component"
-import SEO from "../utils/seo"
+import Section from "../components/templates/section/section.component"
 
 const IndexPage = () => {
   // FIX FOR VH ON MOBILE
@@ -21,11 +20,17 @@ const IndexPage = () => {
     return () => window.removeEventListener("resize", changeVhVariable)
   }, [])
   return (
-    <Layout>
-      <Work />
-      <Work />
-      <Work />
-      <Work />
+    <Layout title="Home Page">
+      <Section>
+        <div className="grid grid-cols-3 gap-6">
+          <Work />
+          <Work />
+          <Work />
+          <Work />
+          <Work />
+          <Work />
+        </div>
+      </Section>
     </Layout>
   )
 }
