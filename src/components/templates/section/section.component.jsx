@@ -4,6 +4,7 @@ import { base } from "./section.module.css"
 const Section = ({ children, title, subtitle, white }) => {
   return (
     <section
+      id={title.toLowerCase()}
       className={classNames(
         "px-6 py-12",
         { "bg-white": white },

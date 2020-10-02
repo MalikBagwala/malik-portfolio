@@ -2,11 +2,11 @@ import React from "react"
 import classNames from "../../../utils/classNames"
 import { base } from "./nav-item.module.css"
 import { navigate } from "gatsby"
-const NavItem = ({ children }) => {
+const NavItem = ({ children, id }) => {
   return (
     <li
       onClick={(e) => {
-        navigate("/")
+        navigate(id ? `/#${id}` : "/")
       }}
       className={classNames(
         "text-gray-600 cursor-pointer hover:text-gray-800 font-semibold",

@@ -28,10 +28,10 @@ const Sidebar = () => {
       <nav className={classNames(nav)}>
         <ul>
           <NavItem>Home</NavItem>
-          <NavItem>About</NavItem>
-          <NavItem>Work</NavItem>
-          <NavItem>Skills</NavItem>
-          <NavItem>Contact</NavItem>
+          <NavItem id="about">About</NavItem>
+          <NavItem id="work">Work</NavItem>
+          <NavItem id="skills">Skills</NavItem>
+          <NavItem id="contact">Contact</NavItem>
         </ul>
       </nav>
       <div

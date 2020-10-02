@@ -1,4 +1,4 @@
-const { colors } = require("tailwindcss/defaultTheme")
+const { colors, fontSize } = require("tailwindcss/defaultTheme")
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
@@ -12,6 +12,10 @@ module.exports = {
           ...colors.gray,
           "100": "#f7f7f7",
         },
+      },
+      fontSize: {
+        ...fontSize,
+        "7xl": "8rem",
       },
     },
     fontFamily: {

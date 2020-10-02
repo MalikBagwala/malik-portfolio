@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import About from "../components/modules/about/about.component"
 import Porfolio from "../components/modules/portfolio/portfolio.component"
 import Layout from "../components/organisms/layout/layout.component"
 // Random Comment
@@ -20,6 +21,7 @@ const IndexPage = () => {
   }, [])
   return (
     <Layout title="Home Page">
+      <About />
       <Porfolio />
     </Layout>
   )
