@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import Porfolio from "../components/modules/portfolio/portfolio.component"
 import Layout from "../components/organisms/layout/layout.component"
-
+// Random Comment
 const IndexPage = () => {
   // FIX FOR VH ON MOBILE
   const changeVhVariable = () => {
