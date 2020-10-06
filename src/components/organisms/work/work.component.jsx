@@ -7,11 +7,14 @@ const Work = ({ work }) => {
   return (
     <div
       onClick={(e) => navigate(work.slug)}
-      className={classNames("bg-white hover:shadow-lg cursor-pointer", card)}
+      className={classNames(
+        "bg-white hover:shadow-lg cursor-pointer rounded-md",
+        card
+      )}
     >
-      <div className="overflow-hidden">
+      <div className="overflow-hidden border-gray-200 shadow-sm">
         <Img
-          className="w-auto object-cover h-full"
+          className="w-full object-cover"
           fluid={work.thumbnail.fluid}
           alt="Sunset in the mountains"
         />

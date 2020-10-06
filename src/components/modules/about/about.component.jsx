@@ -21,7 +21,7 @@ const About = () => {
         <div className="w-1/3">
           <Img
             fluid={data.contentfulAsset.fluid}
-            className="w-full shadow-md"
+            className="w-full shadow-md rounded-md"
           />
         </div>
         <div className="w-2/3 px-6">

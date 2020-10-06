@@ -1,12 +1,17 @@
 import React from "react"
+import iconData from "./icon.data"
 
 const Icon = (props) => {
   const className = props.className
+  const svgProps = {
+    className,
+    onClick: props.onClick,
+  }
   switch (props.name) {
     case "code":
       return (
         <svg
-          className={className}
+          {...svgProps}
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -23,7 +28,7 @@ const Icon = (props) => {
     case "globe":
       return (
         <svg
-          className={className}
+          {...svgProps}
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -41,7 +46,7 @@ const Icon = (props) => {
     case "linkedln":
       return (
         <svg
-          className={className}
+          {...svgProps}
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +59,7 @@ const Icon = (props) => {
     case "github":
       return (
         <svg
-          className={className}
+          {...svgProps}
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +72,7 @@ const Icon = (props) => {
     case "gitlab":
       return (
         <svg
-          className={className}
+          {...svgProps}
           role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -79,7 +84,7 @@ const Icon = (props) => {
     case "stackoverflow":
       return (
         <svg
-          className={className}
+          {...svgProps}
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +105,7 @@ const Icon = (props) => {
     case "report":
       return (
         <svg
-          className={className}
+          {...svgProps}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -116,7 +121,7 @@ const Icon = (props) => {
     case "home":
       return (
         <svg
-          className={className}
+          {...svgProps}
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -134,7 +139,7 @@ const Icon = (props) => {
     case "chat":
       return (
         <svg
-          className={className}
+          {...svgProps}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -150,7 +155,7 @@ const Icon = (props) => {
     case "phone":
       return (
         <svg
-          className={className}
+          {...svgProps}
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -161,6 +166,24 @@ const Icon = (props) => {
             strokeLinejoin="round"
             strokeWidth={2}
             d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+          />
+        </svg>
+      )
+
+    case "chevron-double-down":
+      return (
+        <svg
+          {...svgProps}
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 13l-7 7-7-7m14-8l-7 7-7-7"
           />
         </svg>
       )

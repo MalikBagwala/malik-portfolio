@@ -1,9 +1,9 @@
 import React from "react"
 import classNames from "../../../utils/classNames"
-import { copyright, links, sidebar, title, nav } from "./sidebar.module.css"
-import Icon from "../../atoms/icon/icon.component"
-import NavItem from "../../molecules/nav-item/nav-item.component"
 import Avatar from "../../molecules/avatar/avatar.component"
+import NavItem from "../../molecules/nav-item/nav-item.component"
+import Social from "../../molecules/social/social.component"
+import { copyright, nav, sidebar, title } from "./sidebar.module.css"
 const Sidebar = () => {
   return (
     <header
@@ -40,12 +40,7 @@ const Sidebar = () => {
           copyright
         )}
       >
-        <div className={classNames("flex justify-center mb-4", links)}>
-          <Icon name="gitlab" className="h-4" />
-          <Icon name="github" className="h-4 ml-3" />
-          <Icon name="linkedln" className="h-4 ml-3" />
-          <Icon name="globe" className="h-4 ml-3" />
-        </div>
+        <Social />
         <p className="text-sm text-gray-600 text-center">
           &copy; {new Date().getFullYear()}{" "}
           <span className="text-gray-900">Malik Bagwala</span>

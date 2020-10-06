@@ -15,7 +15,7 @@ const WorkDetail = ({ data }) => {
         <div className="flex">
           <div className="images w-2/3">
             <Img
-              className="mb-8 shadow"
+              className="mb-8 shadow rounded-lg"
               fluid={work.thumbnail.fluid}
               alt={work.title}
             />
@@ -45,7 +45,7 @@ const WorkDetail = ({ data }) => {
                 <Icon name="globe" className="h-4 mr-2" />
                 Live
               </Button>
-              <Button href={work.source} target="__blank" as="a">
+              <Button minimal href={work.source} target="__blank" as="a">
                 <Icon name="code" className="h-4 mr-2" /> Code
               </Button>
             </div>
