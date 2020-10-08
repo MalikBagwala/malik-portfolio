@@ -6,7 +6,7 @@ import Button from "../../atoms/button/button.component"
 import Icon from "../../atoms/icon/icon.component"
 const Contact = () => {
   return (
-    <Section white title="contact me" subtitle="get in touch">
+    <Section title="contact me" subtitle="get in touch">
       <div className="flex">
         <div className="w-1/2">
           <h6 className="">Malik Bagwala</h6>

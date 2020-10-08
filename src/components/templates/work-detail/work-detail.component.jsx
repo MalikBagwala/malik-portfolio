@@ -6,34 +6,29 @@ import Tag from "../../atoms/tag/tag.component"
 import Button from "../../atoms/button/button.component"
 import Icon from "../../atoms/icon/icon.component"
 import Img from "gatsby-image"
+import RichText from "../../molecules/rich-text/rich-text.component"
 const WorkDetail = ({ data }) => {
   const work = data.contentfulWork
-  console.log(work)
   return (
     <Layout title={`Work | ${work.title}`}>
-      <Section white={true} title={work.title} subtitle="title">
+      <Section
+        className="bg-white"
+        title={work.title}
+        subtitle="title"
+        alternatingBackground={false}
+      >
         <div className="flex">
-          <div className="images w-2/3">
+          <div className="images w-1/2">
             <Img
               className="mb-8 shadow rounded-lg"
               fluid={work.thumbnail.fluid}
               alt={work.title}
             />
           </div>
-          <div className="sticky top-auto flex flex-col overflow-hidden px-6 w-1/3">
+          <div className="sticky top-auto flex flex-col overflow-hidden px-6 w-1/2">
             <div>
               <h6 className="text-xl mb-4">Description</h6>
-              <p className="text-gray-700">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Laudantium quidem dolorum veritatis? Repellat doloribus aut
-                accusantium assumenda explicabo? Dolore dignissimos sapiente
-                repellat? Nihil, sapiente. Officia aspernatur necessitatibus
-                itaque dicta? Natus rem esse placeat quis nisi enim eligendi,
-                aliquam quaerat quam necessitatibus voluptatum optio in, illo,
-                quae mollitia est assumenda doloremque. Illum accusamus possimus
-                doloribus fugit cupiditate ea ab porro eius maiores voluptas id
-                voluptatum consequatur soluta debitis ipsum, ipsa explicabo!
-              </p>
+              <RichText document={JSON.parse(work.description.description)} />
               <div className="mt-4 mb-10 ">
                 {work.tags?.map((t) => (
                   <Tag key={t.contentful_id} title={t.tagName} />
@@ -66,6 +61,7 @@ export const query = graphql`
       title
       description {
         id
+        description
       }
       live
       source

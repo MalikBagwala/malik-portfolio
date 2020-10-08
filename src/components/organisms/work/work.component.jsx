@@ -4,7 +4,6 @@ import classNames from "../../../utils/classNames"
 import { card } from "./work.module.css"
 import Img from "gatsby-image"
 const Work = ({ work }) => {
-  console.log(work.thumbnail.fluid)
   return (
     <div
       onClick={(e) => navigate(work.slug)}

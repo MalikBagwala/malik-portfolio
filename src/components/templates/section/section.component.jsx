@@ -1,13 +1,19 @@
 import React from "react"
 import classNames from "../../../utils/classNames"
-const Section = ({ children, hero, title, subtitle, white, className }) => {
+const Section = ({
+  children,
+  hero,
+  alternatingBackground = true,
+  title,
+  subtitle,
+  className,
+}) => {
   return (
     <section
       id={title.toLowerCase()}
       className={classNames(
         "px-6 py-12",
-        { "bg-white": white },
-        { "bg-gray-100": !white },
+        { "bg-white odd:bg-gray-100": alternatingBackground },
         className
       )}
     >

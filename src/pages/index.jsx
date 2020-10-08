@@ -3,6 +3,7 @@ import About from "../components/modules/about/about.component"
 import Contact from "../components/modules/contact/contact.component"
 import Hero from "../components/modules/hero/hero.component"
 import Porfolio from "../components/modules/portfolio/portfolio.component"
+// import Skills from "../components/modules/skills/skills.component"
 import Layout from "../components/organisms/layout/layout.component"
 // Random Comment
 const IndexPage = () => {
@@ -26,6 +27,7 @@ const IndexPage = () => {
       <Hero />
       <About />
       <Porfolio />
+      {/* <Skills /> */}
       <Contact />
     </Layout>
   )

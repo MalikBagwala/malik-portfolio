@@ -9,7 +9,12 @@ const Layout = ({ title, children }) => {
     <section className="h-screen">
       <SEO title={title} />
       <Sidebar />
-      <div className={classNames("min-h-screen bg-gray-100", container)}>
+      <div
+        className={classNames(
+          "min-h-screen flex flex-col justify-between bg-gray-100",
+          container
+        )}
+      >
         <div>{children}</div>
         <Footer />
       </div>

@@ -8,9 +8,10 @@ module.exports = {
     author: `@MalikBagwala`,
     siteUrl: "https://malikbagwala.dev",
     socialMedia: {
-      github: "https://github.com/MalikBagwala",
       gitlab: "https://gitlab.com/MalikBagwala",
+      github: "https://github.com/MalikBagwala",
       linkedin: "https://www.linkedin.com/in/malik-bagwala-b989b5185",
+      stackoverflow: "https://stackoverflow.com/users/10177043/malik-bagwala",
       mail: "m.bagwala@outlook.com",
     },
   },

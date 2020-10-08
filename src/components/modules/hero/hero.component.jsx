@@ -10,6 +10,7 @@ const Hero = () => {
       hero
       className={classNames("h-screen bg-gray-900 relative", base)}
       title="Home"
+      alternatingBackground={false}
       subtitle="portfolio"
     >
       <Icon

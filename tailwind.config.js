@@ -4,7 +4,7 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: [],
+  purge: ["./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.jsx", "./src/**/*.js"],
   theme: {
     extend: {
       colors: {
@@ -23,6 +23,8 @@ module.exports = {
       display: ["Rubik", "sans-serif"],
     },
   },
-  variants: {},
+  variants: {
+    backgroundColor: ["responsive", "odd", "hover", "focus"],
+  },
   plugins: [],
 }
