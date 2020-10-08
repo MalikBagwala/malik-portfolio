@@ -12,7 +12,7 @@ const Work = ({ work }) => {
         card
       )}
     >
-      <div className="overflow-hidden border-gray-200 shadow-sm">
+      <div className="overflow-hidden border-gray-200 shadow-sm rounded-t-md">
         <Img
           className="w-full object-cover"
           fluid={work.thumbnail.fluid}
