@@ -2,7 +2,7 @@ import React from "react"
 import classNames from "../../../utils/classNames"
 import Section from "../../templates/section/section.component"
 import Img from "gatsby-image"
-import { useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Button from "../../atoms/button/button.component"
 import Icon from "../../atoms/icon/icon.component"
 const About = () => {

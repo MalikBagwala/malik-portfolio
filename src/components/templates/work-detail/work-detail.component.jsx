@@ -7,6 +7,7 @@ import Button from "../../atoms/button/button.component"
 import Icon from "../../atoms/icon/icon.component"
 import Img from "gatsby-image"
 import RichText from "../../molecules/rich-text/rich-text.component"
+import { tags } from "./work-detail.module.css"
 const WorkDetail = ({ data }) => {
   const work = data.contentfulWork
   return (
@@ -29,9 +30,13 @@ const WorkDetail = ({ data }) => {
             <div>
               <h6 className="text-xl mb-4">Description</h6>
               <RichText document={JSON.parse(work.description.description)} />
-              <div className="mt-4 mb-10 ">
+              <div className={tags}>
                 {work.tags?.map((t) => (
-                  <Tag key={t.contentful_id} title={t.tagName} />
+                  <Tag
+                    className="mb-3"
+                    key={t.contentful_id}
+                    title={t.tagName}
+                  />
                 ))}
               </div>
             </div>

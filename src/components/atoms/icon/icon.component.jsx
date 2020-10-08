@@ -1,5 +1,4 @@
 import React from "react"
-import iconData from "./icon.data"
 
 const Icon = (props) => {
   const className = props.className

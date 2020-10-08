@@ -5,7 +5,7 @@ const Tag = ({ title, className }) => {
   return (
     <span
       className={classNames(
-        "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700",
+        "inline-block bg-yellow-200 rounded-full px-3 py-1 text-sm font-semibold text-yellow-700",
         className
       )}
     >
