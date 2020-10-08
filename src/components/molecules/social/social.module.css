@@ -1,0 +1,7 @@
+.container {
+  @apply flex justify-center mb-4;
+}
+
+.container a:not(:first-child) {
+  @apply ml-3;
+}

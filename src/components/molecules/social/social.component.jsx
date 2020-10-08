@@ -1,11 +1,12 @@
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import classNames from "../../../utils/classNames"
 import Icon from "../../atoms/icon/icon.component"
-
-const SocialIcon = ({ className, name, href }) => {
+import { container } from "./social.module.css"
+const SocialIcon = ({ className, name, href, target = "__blank" }) => {
   return (
     <a
-      target="__blank"
+      target={target}
       href={href}
       className={classNames(
         "bg-gray-800 p-2 rounded-full cursor-pointer hover:bg-gray-700",
@@ -17,24 +18,36 @@ const SocialIcon = ({ className, name, href }) => {
   )
 }
 const Social = () => {
+  const site = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          socialMedia {
+            github
+            linkedln
+            gitlab
+            mail
+            stackoverflow
+          }
+        }
+      }
+    }
+  `)
+
+  const social = site && site.site.siteMetadata.socialMedia
+  console.log(social)
   return (
-    <div className={classNames("flex justify-center mb-4")}>
-      <SocialIcon href="https://github.com/MalikBagwala/" name="github" />
-      <SocialIcon
-        href="https://www.linkedin.com/in/malik-bagwala-b989b5185/"
-        name="linkedln"
-        className="ml-3"
-      />
-      <SocialIcon
-        className="ml-3"
-        href="https://gitlab.com/MalikBagwala"
-        name="gitlab"
-      />
-      <SocialIcon
-        href="https://stackoverflow.com/users/10177043/malik-bagwala"
-        name="stackoverflow"
-        className="ml-3"
-      />
+    <div className={container}>
+      {Object.keys(social).map((s) => {
+        const link = social[s]
+        return (
+          <SocialIcon
+            target={link.includes("@") ? null : undefined}
+            href={link.includes("@") ? `mailto:${link}` : link}
+            name={s}
+          />
+        )
+      })}
     </div>
   )
 }

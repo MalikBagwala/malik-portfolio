@@ -26,7 +26,8 @@
     "tailwindcss": "^1.8.10"
   },
   "devDependencies": {
-    "serve": "^11.1.0"
+    "serve": "^11.1.0",
+    "stylelint-config-recommended": "^3.0.0"
   },
   "keywords": [
     "gatsby",
