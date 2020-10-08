@@ -4,6 +4,7 @@ import classNames from "../../../utils/classNames"
 import { card } from "./work.module.css"
 import Img from "gatsby-image"
 const Work = ({ work }) => {
+  console.log(work.thumbnail.fluid)
   return (
     <div
       onClick={(e) => navigate(work.slug)}
@@ -15,7 +16,7 @@ const Work = ({ work }) => {
       <div className="overflow-hidden border-gray-200 shadow-sm rounded-t-md">
         <Img
           className="w-full object-cover"
-          fluid={work.thumbnail.fluid}
+          fluid={{ ...work.thumbnail.fluid, aspectRatio: 16 / 9 }}
           alt="Sunset in the mountains"
         />
       </div>
