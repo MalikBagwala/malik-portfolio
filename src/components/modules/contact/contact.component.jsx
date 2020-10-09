@@ -4,7 +4,21 @@ import Section from "../../templates/section/section.component"
 import TextArea from "../../atoms/textarea/textarea.component"
 import Button from "../../atoms/button/button.component"
 import Icon from "../../atoms/icon/icon.component"
+import { graphql, useStaticQuery } from "gatsby"
 const Contact = () => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            socialMedia {
+              mail
+            }
+          }
+        }
+      }
+    `
+  )
   return (
     <Section title="contact me" subtitle="get in touch">
       <div className="flex">
@@ -15,7 +29,8 @@ const Contact = () => {
             <Icon name="phone" className="h-4 mr-2" /> +91 9975130529
           </h6>
           <h6 className="flex items-center text-gray-700 ">
-            <Icon name="chat" className="h-4 mr-2" /> m.bagwala@outlook.com
+            <Icon name="mail" className="h-4 mr-2" />{" "}
+            {site.siteMetadata.socialMedia.mail}
           </h6>
         </div>
         <div className="w-1/2">

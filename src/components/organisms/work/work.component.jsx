@@ -4,6 +4,7 @@ import classNames from "../../../utils/classNames"
 import { card } from "./work.module.css"
 import Img from "gatsby-image"
 const Work = ({ work }) => {
+  const description = work && work.shortDescription.childMarkdownRemark.html
   return (
     <div
       onClick={(e) => navigate(work.slug)}
@@ -21,14 +22,11 @@ const Work = ({ work }) => {
       </div>
 
       <div className="p-4">
-        <h6 className="mb-4 text-black">{work.title}</h6>
-        <p className="text-sm text-gray-700">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod ipsum
-          explicabo voluptate cupiditate, aliquam facilis laudantium asperiores
-          quisquam amet? Sint quam debitis nostrum id tenetur consequuntur
-          ratione, necessitatibus maxime! Repudiandae, facere asperiores in est
-          esse rerum necessitatibus quia reprehenderit distinctio.
-        </p>
+        <h6 className="mb-4 text-lg text-black">{work.title}</h6>
+        <div
+          className="text-gray-800"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
       </div>
     </div>
   )

@@ -11,8 +11,10 @@ const Porfolio = () => {
             contentful_id
             slug
             title
-            description {
-              id
+            shortDescription {
+              childMarkdownRemark {
+                html
+              }
             }
             live
             source
