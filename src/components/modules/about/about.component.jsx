@@ -9,7 +9,7 @@ const About = () => {
   const data = useStaticQuery(graphql`
     {
       contentfulAsset(contentful_id: { eq: "5NkOM8Yz5pgnmOXIvBg8qP" }) {
-        fluid {
+        fluid(maxWidth: 600, quality: 50) {
           ...GatsbyContentfulFluid_withWebp
         }
       }
