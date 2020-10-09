@@ -18,7 +18,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
-
+    {
+      resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+        selector: "[data-sal]", // Selector of the elements to be animated
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

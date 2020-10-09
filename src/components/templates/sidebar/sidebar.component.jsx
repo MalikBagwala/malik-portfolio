@@ -20,7 +20,7 @@ const Sidebar = () => {
       >
         <Avatar />
         <span className="uppercase font-display tracking-wider">Malik</span>
-        <span className="text-base text-gray-600 tracking-wide">
+        <span className="text-base text-gray-800 tracking-wide">
           front-end developer
         </span>
       </div>
@@ -30,7 +30,7 @@ const Sidebar = () => {
           <NavItem>Home</NavItem>
           <NavItem id="about">About</NavItem>
           <NavItem id="work">Work</NavItem>
-          <NavItem id="skills">Skills</NavItem>
+          {/* <NavItem id="skills">Skills</NavItem> */}
           <NavItem id="contact">Contact</NavItem>
         </ul>
       </nav>
@@ -41,7 +41,7 @@ const Sidebar = () => {
         )}
       >
         <Social />
-        <p className="text-sm text-gray-600 text-center">
+        <p className="text-sm text-gray-800 text-center">
           &copy; {new Date().getFullYear()}{" "}
           <span className="text-gray-900">Malik Bagwala</span>
         </p>

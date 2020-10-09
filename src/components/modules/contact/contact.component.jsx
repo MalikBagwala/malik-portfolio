@@ -20,7 +20,7 @@ const Contact = () => {
     `
   )
   return (
-    <Section title="contact me" subtitle="get in touch">
+    <Section title="contact" subtitle="get in touch">
       <div className="flex">
         <div className="w-1/2">
           <h6 className="">Malik Bagwala</h6>

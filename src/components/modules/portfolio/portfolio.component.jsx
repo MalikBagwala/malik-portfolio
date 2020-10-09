@@ -20,7 +20,7 @@ const Porfolio = () => {
             source
             thumbnail {
               contentful_id
-              fluid(maxWidth: 800, quality: 60) {
+              fluid(maxWidth: 600, quality: 55) {
                 ...GatsbyContentfulFluid_withWebp
               }
             }

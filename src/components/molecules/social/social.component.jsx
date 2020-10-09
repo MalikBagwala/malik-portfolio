@@ -6,6 +6,7 @@ import { container } from "./social.module.css"
 const SocialIcon = ({ className, name, href, target = "__blank" }) => {
   return (
     <a
+      aria-label={name}
       target={target}
       href={href}
       className={classNames(
