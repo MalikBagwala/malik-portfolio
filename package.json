@@ -29,6 +29,7 @@
     "serve": "^11.1.0",
     "stylelint-config-recommended": "^3.0.0"
   },
+  "browserslist": [">0.25%", "not dead"],
   "keywords": [
     "gatsby",
     "react",
