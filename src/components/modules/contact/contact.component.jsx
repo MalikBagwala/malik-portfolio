@@ -19,6 +19,8 @@ const Contact = () => {
       }
     `
   )
+
+  const mail = site.siteMetadata.socialMedia.mail
   return (
     <Section title="contact" subtitle="get in touch">
       <div className="flex">
@@ -29,20 +31,18 @@ const Contact = () => {
             <Icon name="phone" className="h-4 mr-2" /> +91 9975130529
           </h2>
           <h2 className="flex items-center text-gray-700 ">
-            <Icon name="mail" className="h-4 mr-2" />{" "}
-            {site.siteMetadata.socialMedia.mail}
+            <Icon name="mail" className="h-4 mr-2" /> {mail}
           </h2>
         </div>
         <div className="w-1/2">
           <form
-            onSubmit={(e) => {
-              e.preventDefault()
-              console.log(e)
-            }}
+            target="__blank"
+            action={`https://formsubmit.co/${mail}`}
+            method="POST"
           >
             <div className="flex">
               <Input placeholder="Name" label="Name" />
-              <Input placeholder="Email" label="Email" />
+              <Input required type="email" placeholder="Email" label="Email" />
             </div>
             <TextArea placeholder="Message" label="message" className="mt-6" />
             <Button type="submit" className="mt-6 ml-3 inline-flex">
