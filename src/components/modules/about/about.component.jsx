@@ -25,9 +25,9 @@ const About = () => {
           />
         </div>
         <div className="w-2/3 px-6">
-          <h6 className="text-2xl font-display text-gray-800 mb-6">
+          <h2 className="text-2xl font-display text-gray-800 mb-6">
             Hey I'm Malik 🤞
-          </h6>
+          </h2>
           <p className="text-gray-700">
             A 21 year old self-taught developer specializing in front-end
             development. I have always been passionate about creating

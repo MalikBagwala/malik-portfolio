@@ -28,7 +28,7 @@ const WorkDetail = ({ data }) => {
           </div>
           <div className="sticky top-auto flex flex-col overflow-hidden px-6 w-1/2">
             <div>
-              <h6 className="text-xl mb-4">Description</h6>
+              <h2 className="text-xl mb-4">Description</h2>
               <RichText document={JSON.parse(work.description.description)} />
               <div className={tags}>
                 {work.tags?.map((t) => (

@@ -23,15 +23,15 @@ const Contact = () => {
     <Section title="contact" subtitle="get in touch">
       <div className="flex">
         <div className="w-1/2">
-          <h6 className="">Malik Bagwala</h6>
+          <h2>Malik Bagwala</h2>
 
-          <h6 className="flex items-center text-gray-700 mt-6">
+          <h2 className="flex items-center text-gray-700 mt-6">
             <Icon name="phone" className="h-4 mr-2" /> +91 9975130529
-          </h6>
-          <h6 className="flex items-center text-gray-700 ">
+          </h2>
+          <h2 className="flex items-center text-gray-700 ">
             <Icon name="mail" className="h-4 mr-2" />{" "}
             {site.siteMetadata.socialMedia.mail}
-          </h6>
+          </h2>
         </div>
         <div className="w-1/2">
           <form

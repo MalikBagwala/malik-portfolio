@@ -22,7 +22,7 @@ const Work = ({ work }) => {
       </div>
 
       <div className="p-4">
-        <h6 className="mb-4 text-lg text-black">{work.title}</h6>
+        <h2 className="mb-4 text-lg text-black">{work.title}</h2>
         <div
           className="text-gray-800"
           dangerouslySetInnerHTML={{ __html: description }}

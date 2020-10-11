@@ -20,9 +20,9 @@ const Section = ({
       {!hero && (
         <div className="mb-8">
           <span className="uppercase text-xs text-gray-700">{subtitle}</span>
-          <h6 className="uppercase font-display text-2xl text-gray-800">
+          <h1 className="uppercase font-display text-2xl text-gray-800">
             {title}
-          </h6>
+          </h1>
         </div>
       )}
       {children}
