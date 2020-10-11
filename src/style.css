@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla&family=Rubik:wght@400;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body::-webkit-scrollbar {
   display: none;
 }

@@ -28,12 +28,7 @@ const About = () => {
           <h6 className="text-2xl font-display text-gray-800 mb-6">
             Hey I'm Malik 🤞
           </h6>
-          <p
-            data-sal="fade"
-            data-sal-delay="300"
-            data-sal-easing="ease"
-            className="text-gray-700"
-          >
+          <p className="text-gray-700">
             A 21 year old self-taught developer specializing in front-end
             development. I have always been passionate about creating
             user-interfaces that speak, and are a pleasure to use, I like to
@@ -45,9 +40,6 @@ const About = () => {
             bleeding edge frameworks and technologies.
           </p>
           <Button
-            data-sal="slide-up"
-            data-sal-delay="400"
-            data-sal-easing="ease"
             as="a"
             target="__blank"
             href="/resume.pdf"

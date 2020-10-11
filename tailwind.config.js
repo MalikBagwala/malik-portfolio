@@ -1,4 +1,4 @@
-const { colors, fontSize } = require("tailwindcss/defaultTheme")
+const { colors, fontSize, fontFamily } = require("tailwindcss/defaultTheme")
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
@@ -19,8 +19,9 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ["Karla", "Arial", "sans-serif"],
-      display: ["Rubik", "sans-serif"],
+      ...fontFamily,
+      sans: ["Karla", ...fontFamily.sans],
+      display: ["Rubik", "Arial"],
     },
   },
   variants: {

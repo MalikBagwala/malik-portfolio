@@ -7,9 +7,6 @@ const Work = ({ work }) => {
   const description = work && work.shortDescription.childMarkdownRemark.html
   return (
     <div
-      data-sal="fade"
-      data-sal-delay="300"
-      data-sal-easing="ease"
       onClick={(e) => navigate(work.slug)}
       className={classNames(
         "bg-white hover:shadow-lg cursor-pointer rounded-md",
