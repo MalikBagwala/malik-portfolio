@@ -9,5 +9,5 @@
 }
 
 .heading {
-  @apply font-bold text-yellow-300;
+  @apply font-bold text-yellow-300 text-6xl;
 }

@@ -8,12 +8,15 @@ const Hero = () => {
   return (
     <Section
       hero
-      className={classNames("h-screen bg-gray-900 relative", base)}
+      className={classNames(
+        "h-screen bg-gray-900 relative flex items-center justify-center",
+        base
+      )}
       title="Home"
       alternatingBackground={false}
       subtitle="portfolio"
     >
-      <h1 className={heading}></h1>
+      <h1 className={heading}>Malik Bagwala</h1>
       <Icon
         onClick={(e) => {
           console.log("Clicked")
