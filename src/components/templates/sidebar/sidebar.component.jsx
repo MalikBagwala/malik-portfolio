@@ -2,6 +2,7 @@ import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import React from "react"
 import classNames from "../../../utils/classNames"
 import Avatar from "../../molecules/avatar/avatar.component"
+import DarkModeToggle from "../../molecules/dark-mode/dark-mode.component"
 import NavItem from "../../molecules/nav-item/nav-item.component"
 import Social from "../../molecules/social/social.component"
 import { copyright, nav, sidebar, title } from "./sidebar.module.css"
@@ -26,19 +27,9 @@ const Sidebar = () => {
         <span className="text-base text-gray-800 dark:text-gray-200 tracking-wide">
           front-end developer
         </span>
+        <DarkModeToggle />
       </div>
-      <ThemeToggler>
-        {({ theme, toggleTheme }) => (
-          <label>
-            <input
-              type="checkbox"
-              onChange={(e) => toggleTheme(e.target.checked ? "dark" : "light")}
-              checked={theme === "dark"}
-            />{" "}
-            Dark mode
-          </label>
-        )}
-      </ThemeToggler>
+
       <nav className={classNames(nav)}>
         <ul>
           <NavItem>Home</NavItem>
