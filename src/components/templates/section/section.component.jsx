@@ -14,7 +14,7 @@ const Section = ({
       className={classNames(
         "px-6 py-12",
         {
-          "dark:bg-gray-900 odd:bg-gray-100 dark:odd:bg-gray-900 dark:border-b border-gray-800": alternatingBackground,
+          "bg-white odd:bg-gray-100 dark:bg-gray-900 dark:border-b border-gray-800": alternatingBackground,
         },
         className
       )}

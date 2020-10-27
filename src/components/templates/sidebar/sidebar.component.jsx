@@ -1,4 +1,3 @@
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import React from "react"
 import classNames from "../../../utils/classNames"
 import Avatar from "../../molecules/avatar/avatar.component"
