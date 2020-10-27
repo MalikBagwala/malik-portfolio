@@ -5,7 +5,7 @@ import Section from "../../templates/section/section.component"
 const Porfolio = () => {
   const data = useStaticQuery(graphql`
     query allContentfulWork {
-      allContentfulWork {
+      allContentfulWork(sort: { order: DESC, fields: [updatedAt] }) {
         edges {
           node {
             contentful_id

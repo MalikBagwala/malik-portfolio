@@ -10,6 +10,7 @@ import RichText from "../../molecules/rich-text/rich-text.component"
 import { tags } from "./work-detail.module.css"
 const WorkDetail = ({ data }) => {
   const work = data.contentfulWork
+
   return (
     <Layout title={`Work | ${work.title}`}>
       <Section
@@ -25,6 +26,17 @@ const WorkDetail = ({ data }) => {
               fluid={work.thumbnail.fluid}
               alt={work.title}
             />
+            {work.photos &&
+              work.photos.map((p) => {
+                return (
+                  <Img
+                    key={p.contentful_id}
+                    className="mb-8 shadow rounded-lg"
+                    fluid={p.fluid}
+                    alt={p.title}
+                  />
+                )
+              })}
           </div>
           <div className="sticky top-auto flex flex-col overflow-hidden px-6 w-1/2">
             <div>
@@ -76,6 +88,13 @@ export const query = graphql`
       }
       thumbnail {
         contentful_id
+        fluid(maxWidth: 1920, quality: 80) {
+          ...GatsbyContentfulFluid_withWebp
+        }
+      }
+      photos {
+        contentful_id
+        title
         fluid(maxWidth: 1920, quality: 80) {
           ...GatsbyContentfulFluid_withWebp
         }
