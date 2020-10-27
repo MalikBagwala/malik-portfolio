@@ -14,7 +14,10 @@ const SocialIcon = ({ className, name, href, target = "__blank" }) => {
         className
       )}
     >
-      <Icon name={name} className="fill-current text-gray-100 h-4" />
+      <Icon
+        name={name}
+        className="fill-current text-gray-100 dark:text-white h-4"
+      />
     </a>
   )
 }

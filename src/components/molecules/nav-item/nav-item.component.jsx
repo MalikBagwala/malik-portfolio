@@ -9,7 +9,7 @@ const NavItem = ({ children, id }) => {
         navigate(id ? `/#${id}` : "/")
       }}
       className={classNames(
-        "text-gray-700 cursor-pointer hover:text-gray-900 font-semibold",
+        "text-gray-700 dark:text-gray-200 cursor-pointer hover:text-gray-900 font-semibold",
         base
       )}
     >

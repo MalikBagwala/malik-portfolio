@@ -4,7 +4,9 @@ import { base } from "./button.module.css"
 const Button = ({ children, as, className, minimal, ...otherProps }) => {
   const finalClassNames = classNames(
     "text-sm uppercase px-3 py-2  tracking-wider rounded flex justify-center items-center",
-    { "bg-gray-900 text-white hover:bg-gray-800": !minimal },
+    {
+      "bg-gray-900 text-white hover:bg-gray-800 dark:bg-gray-800 dark:hover:bg-gray-700": !minimal,
+    },
     { "bg-gray-300 text-gray-900 hover:bg-gray-200 ": minimal },
     base,
     className

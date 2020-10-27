@@ -9,7 +9,9 @@ const options = {
   },
   renderNode: {
     [BLOCKS.PARAGRAPH]: (_, children) => (
-      <p className="text-gray-900 text-lg leading-8">{children}</p>
+      <p className="text-gray-900 dark:text-gray-400 text-lg leading-8">
+        {children}
+      </p>
     ),
     [INLINES.HYPERLINK]: (node) => (
       <Anchor href={node.data.uri}>{node.content[0].value}</Anchor>

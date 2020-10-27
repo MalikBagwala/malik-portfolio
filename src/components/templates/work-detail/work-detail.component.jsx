@@ -13,7 +13,7 @@ const WorkDetail = ({ data }) => {
   return (
     <Layout title={`Work | ${work.title}`}>
       <Section
-        className="bg-white"
+        className="bg-white dark:bg-gray-900"
         title={work.title}
         subtitle="title"
         alternatingBackground={false}
@@ -28,7 +28,7 @@ const WorkDetail = ({ data }) => {
           </div>
           <div className="sticky top-auto flex flex-col overflow-hidden px-6 w-1/2">
             <div>
-              <h2 className="text-xl mb-4">Description</h2>
+              <h2 className="text-xl mb-4 dark:text-gray-500">Description</h2>
               <RichText document={JSON.parse(work.description.description)} />
               <div className={tags}>
                 {work.tags?.map((t) => (

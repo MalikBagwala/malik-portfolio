@@ -18,7 +18,7 @@ const TextArea = ({
 
       <textarea
         className={classNames(
-          "appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white",
+          "appearance-none block w-full bg-gray-200 dark:bg-gray-800 text-gray-700 border dark:border-gray-800 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white dark:focus:bg-gray-200",
           {
             "border-red-500": error,
           }

@@ -1,3 +1,4 @@
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import React from "react"
 import classNames from "../../../utils/classNames"
 import Avatar from "../../molecules/avatar/avatar.component"
@@ -8,7 +9,7 @@ const Sidebar = () => {
   return (
     <header
       className={classNames(
-        "bg-white shadow-lg py-12 px-8 h-full fixed flex flex-col justify-between top-0 left-0",
+        "bg-white dark:bg-gray-900 shadow-lg dark:border-r-2 py-12 px-8 h-full fixed flex flex-col justify-between top-0 left-0",
         sidebar
       )}
     >
@@ -19,12 +20,25 @@ const Sidebar = () => {
         )}
       >
         <Avatar />
-        <span className="uppercase font-display tracking-wider">Malik</span>
-        <span className="text-base text-gray-800 tracking-wide">
+        <span className="uppercase font-display tracking-wider dark:text-white">
+          Malik
+        </span>
+        <span className="text-base text-gray-800 dark:text-gray-200 tracking-wide">
           front-end developer
         </span>
       </div>
-
+      <ThemeToggler>
+        {({ theme, toggleTheme }) => (
+          <label>
+            <input
+              type="checkbox"
+              onChange={(e) => toggleTheme(e.target.checked ? "dark" : "light")}
+              checked={theme === "dark"}
+            />{" "}
+            Dark mode
+          </label>
+        )}
+      </ThemeToggler>
       <nav className={classNames(nav)}>
         <ul>
           <NavItem>Home</NavItem>
@@ -41,9 +55,11 @@ const Sidebar = () => {
         )}
       >
         <Social />
-        <p className="text-sm text-gray-800 text-center">
+        <p className="text-sm text-gray-800 dark:text-gray-700 text-center">
           &copy; {new Date().getFullYear()}{" "}
-          <span className="text-gray-900">Malik Bagwala</span>
+          <span className="text-gray-900 dark:text-gray-600">
+            Malik Bagwala
+          </span>
         </p>
       </div>
     </header>

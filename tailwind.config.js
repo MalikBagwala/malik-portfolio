@@ -1,5 +1,9 @@
 const { colors, fontSize, fontFamily } = require("tailwindcss/defaultTheme")
 module.exports = {
+  experimental: {
+    darkModeVariant: true,
+  },
+  dark: "class",
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
@@ -25,7 +29,7 @@ module.exports = {
     },
   },
   variants: {
-    backgroundColor: ["responsive", "odd", "hover", "focus"],
+    backgroundColor: ["responsive", "odd", "hover", "focus", "dark"],
   },
   plugins: [],
 }

@@ -25,10 +25,10 @@ const About = () => {
           />
         </div>
         <div className="w-2/3 px-6">
-          <h2 className="text-2xl font-display text-gray-800 mb-6">
+          <h2 className="text-2xl font-display text-gray-800 dark:text-gray-100 mb-6">
             Hey I'm Malik 🤞
           </h2>
-          <p className="text-gray-700">
+          <p className="text-gray-700 dark:text-gray-200">
             A 21 year old self-taught developer specializing in front-end
             development. I have always been passionate about creating
             user-interfaces that speak, and are a pleasure to use, I like to
