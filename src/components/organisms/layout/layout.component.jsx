@@ -11,7 +11,7 @@ const Layout = ({ title, children }) => {
       <Sidebar />
       <div
         className={classNames(
-          "min-h-screen flex flex-col justify-between bg-gray-100",
+          "min-h-screen flex flex-col justify-between bg-gray-100 dark:bg-gray-900",
           container
         )}
       >

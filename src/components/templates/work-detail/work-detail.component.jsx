@@ -13,7 +13,7 @@ const WorkDetail = ({ data }) => {
   return (
     <Layout title={`Work | ${work.title}`}>
       <Section
-        className="bg-white dark:bg-gray-900"
+        className="bg-white dark:bg-gray-900 dark:border-b border-gray-800"
         title={work.title}
         subtitle="title"
         alternatingBackground={false}

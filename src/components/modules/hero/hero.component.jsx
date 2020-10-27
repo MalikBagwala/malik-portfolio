@@ -9,7 +9,7 @@ const Hero = () => {
     <Section
       hero
       className={classNames(
-        "h-screen bg-gray-900 relative flex items-center justify-center",
+        "h-screen bg-gray-900 relative flex items-center justify-center dark:border-b border-gray-800",
         base
       )}
       title="Home"

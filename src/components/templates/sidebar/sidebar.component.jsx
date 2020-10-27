@@ -9,7 +9,7 @@ const Sidebar = () => {
   return (
     <header
       className={classNames(
-        "bg-white dark:bg-gray-900 shadow-lg dark:border-r-2 py-12 px-8 h-full fixed flex flex-col justify-between top-0 left-0",
+        "bg-white dark:bg-gray-900 shadow-lg dark:shadow-none dark:border-r dark:border-gray-800 py-12 px-8 h-full fixed flex flex-col justify-between top-0 left-0",
         sidebar
       )}
     >
