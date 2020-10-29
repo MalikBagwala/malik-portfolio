@@ -42,6 +42,13 @@ const WorkDetail = ({ data }) => {
             <div>
               <h2 className="text-xl mb-4 dark:text-gray-500">Description</h2>
               <RichText document={JSON.parse(work.description.description)} />
+              {work.note && (
+                <RichText
+                  mutedAnchor={true}
+                  className="text-sm"
+                  document={JSON.parse(work.note.note)}
+                />
+              )}
               <div className={tags}>
                 {work.tags?.map((t) => (
                   <Tag
@@ -79,6 +86,10 @@ export const query = graphql`
       description {
         id
         description
+      }
+      note {
+        id
+        note
       }
       live
       source

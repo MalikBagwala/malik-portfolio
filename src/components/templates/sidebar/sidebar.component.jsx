@@ -9,7 +9,8 @@ const Sidebar = () => {
   return (
     <header
       className={classNames(
-        "bg-white dark:bg-gray-900 shadow-lg dark:shadow-none dark:border-r dark:border-gray-800 py-12 px-8 h-full fixed flex flex-col justify-between top-0 left-0",
+        "bg-white dark:bg-gray-900 shadow-lg dark:shadow-none dark:border-r dark:border-gray-800",
+        "w-full lg:w-2.8/12 h-8 lg:h-full fixed flex flex-col justify-between bottom-0 lg:top-0 left-0 z-50 py-12 px-8",
         sidebar
       )}
     >
@@ -45,7 +46,7 @@ const Sidebar = () => {
         )}
       >
         <Social />
-        <p className="text-sm text-gray-800 dark:text-gray-700 text-center">
+        <p className="text-sm text-gray-800 dark:text-gray-700 text-center hidden lg:block">
           &copy; {new Date().getFullYear()}{" "}
           <span className="text-gray-900 dark:text-gray-600">
             Malik Bagwala
