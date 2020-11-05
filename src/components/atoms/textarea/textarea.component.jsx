@@ -13,7 +13,7 @@ const TextArea = ({
 }) => {
   const id = labelFor || kebabCase(label)
   return (
-    <div className={classNames("w-full px-3 mb-6 md:mb-0", className)}>
+    <div className={classNames("w-full px-3 mb-0 lg:mb-6", className)}>
       <Label for={id}>{label}</Label>
 
       <textarea

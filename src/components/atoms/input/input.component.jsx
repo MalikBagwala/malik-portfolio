@@ -13,7 +13,7 @@ const Input = ({
 }) => {
   const id = labelFor || kebabCase(label)
   return (
-    <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+    <div className="w-full md:w-1/2 px-3 mb-0 lg:mb-6">
       <Label for={id}>{label}</Label>
       <input
         className={classNames(

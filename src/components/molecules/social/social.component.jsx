@@ -39,7 +39,7 @@ const Social = ({ className }) => {
   `)
 
   const social = site && site.site.siteMetadata.socialMedia
-  console.log(social)
+
   return (
     <div className={classNames("flex justify-center", className, container)}>
       {Object.keys(social).map((s) => {

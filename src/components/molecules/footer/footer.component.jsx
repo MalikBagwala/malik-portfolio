@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer
       className={classNames(
-        "bg-gray-900 text-white px-12 py-8 lg:py-16 flex flex-col lg:flex-row-reverse justify-between items-center"
+        "bg-gray-900 text-white px-12 pt-8 pb-20 lg:py-16 flex flex-col lg:flex-row justify-between items-center"
       )}
     >
       <div className="text-xs text-white order-1 lg:order-none">

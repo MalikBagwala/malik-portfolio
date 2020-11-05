@@ -18,10 +18,7 @@ const Hero = () => {
     >
       <h1 className={heading}>Malik Bagwala</h1>
       <Icon
-        onClick={(e) => {
-          console.log("Clicked")
-          navigate("/#about")
-        }}
+        onClick={(e) => navigate("/#about")}
         className={classNames(
           "text-yellow-300 h-6 absolute animate-bounce cursor-pointer",
           chevron

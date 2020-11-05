@@ -44,7 +44,11 @@ const Contact = () => {
               <Input placeholder="Name" label="Name" />
               <Input required type="email" placeholder="Email" label="Email" />
             </div>
-            <TextArea placeholder="Message" label="message" className="mt-6" />
+            <TextArea
+              placeholder="Message"
+              label="message"
+              className="mt-4 lg:mt-6"
+            />
             <Button type="submit" className="mt-6 ml-3 inline-flex">
               <Icon name="chat" className="h-4 mr-2" /> Submit
             </Button>
