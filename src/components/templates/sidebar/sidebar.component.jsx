@@ -4,6 +4,7 @@ import Avatar from "../../molecules/avatar/avatar.component"
 import DarkModeToggle from "../../molecules/dark-mode/dark-mode.component"
 import NavItem from "../../molecules/nav-item/nav-item.component"
 import Social from "../../molecules/social/social.component"
+import Navigation from "../../organisms/navigation/navigation.component"
 const Sidebar = () => {
   return (
     <header
@@ -15,33 +16,25 @@ const Sidebar = () => {
     >
       <div
         className={classNames(
-          "text-4xl flex flex-col text-center items-center justify-center"
+          "text-4xl hidden lg:flex flex-col text-center items-center justify-center"
           // title
         )}
       >
         <Avatar />
-        <span className="hidden lg:inline uppercase font-display tracking-wider dark:text-white">
+        <span className="inline uppercase font-display tracking-wider dark:text-white">
           Malik
         </span>
-        <span className="hidden lg:inline text-base text-gray-800 dark:text-gray-200 tracking-wide">
+        <span className="inline text-base text-gray-800 dark:text-gray-200 tracking-wide">
           front-end developer
         </span>
         <DarkModeToggle />
       </div>
 
-      <nav className={classNames("hidden lg:block")}>
-        <ul>
-          <NavItem>Home</NavItem>
-          <NavItem id="about">About</NavItem>
-          <NavItem id="work">Work</NavItem>
-          {/* <NavItem id="skills">Skills</NavItem> */}
-          <NavItem id="contact">Contact</NavItem>
-        </ul>
-      </nav>
+      <Navigation />
       <div
         className={classNames("flex flex-col justify-center align-baseline")}
       >
-        <Social className="hidden lg:block" />
+        <Social className="hidden lg:flex" />
         <p className="text-sm text-gray-800 dark:text-gray-700 text-center hidden lg:block">
           &copy; {new Date().getFullYear()}{" "}
           <span className="text-gray-900 dark:text-gray-600">
