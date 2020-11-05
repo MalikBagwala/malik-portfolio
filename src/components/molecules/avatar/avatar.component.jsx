@@ -15,7 +15,10 @@ const Avatar = () => {
   `)
   return (
     <Img
-      className={classNames("rounded-full h-32 w-32 shadow-lg", base)}
+      className={classNames(
+        "hidden lg:block rounded-full h-32 w-32 shadow-lg",
+        base
+      )}
       fluid={data.contentfulAsset.fluid}
     />
   )

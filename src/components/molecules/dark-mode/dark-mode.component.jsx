@@ -7,7 +7,7 @@ const DarkModeToggle = () => {
     <ThemeToggler>
       {({ theme, toggleTheme }) => {
         return (
-          <div className="mt-5 cursor-pointer hover:opacity-75">
+          <div className="lg:mt-5 cursor-pointer hover:opacity-75">
             {theme === "dark" ? (
               <Icon
                 name="sun"

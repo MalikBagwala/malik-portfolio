@@ -17,15 +17,15 @@ const About = () => {
   `)
   return (
     <Section title="about" subtitle="information" white>
-      <div className={classNames("flex")}>
-        <div className="w-1/3">
+      <div className={classNames("flex flex-col lg:flex-row")}>
+        <div className="w-full lg:w-1/3">
           <Img
             fluid={data.contentfulAsset.fluid}
             className="w-full shadow-md rounded-md"
           />
         </div>
-        <div className="w-2/3 px-6">
-          <h2 className="text-2xl font-display text-gray-800 dark:text-gray-100 mb-6">
+        <div className="w-full lg:w-2/3 mt-6 lg:mt-0 lg:px-6">
+          <h2 className="text-2xl font-display text-gray-800 dark:text-gray-100 mb-3 lg:mb-6">
             Hey I'm Malik 🤞
           </h2>
           <p className="text-gray-700 dark:text-gray-200">

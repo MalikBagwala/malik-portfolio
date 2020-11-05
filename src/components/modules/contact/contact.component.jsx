@@ -23,8 +23,8 @@ const Contact = () => {
   const mail = site.siteMetadata.socialMedia.mail
   return (
     <Section title="contact" subtitle="get in touch">
-      <div className="flex">
-        <div className="w-1/2">
+      <div className="flex flex-col lg:flex-row">
+        <div className="w-full px-3 lg:px-0 mb-5 lg:mb-0 lg:w-1/2">
           <h2 className="dark:text-gray-300">Malik Bagwala</h2>
 
           <h2 className="flex items-center text-gray-700 dark:text-gray-300 mt-6">
@@ -34,7 +34,7 @@ const Contact = () => {
             <Icon name="mail" className="h-4 mr-2" /> {mail}
           </h2>
         </div>
-        <div className="w-1/2">
+        <div className="w-full lg:w-1/2">
           <form
             target="__blank"
             action={`https://formsubmit.co/${mail}`}

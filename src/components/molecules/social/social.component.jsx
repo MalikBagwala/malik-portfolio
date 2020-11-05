@@ -21,7 +21,7 @@ const SocialIcon = ({ className, name, href, target = "__blank" }) => {
     </a>
   )
 }
-const Social = () => {
+const Social = ({ className }) => {
   const site = useStaticQuery(graphql`
     {
       site {
@@ -41,7 +41,7 @@ const Social = () => {
   const social = site && site.site.siteMetadata.socialMedia
   console.log(social)
   return (
-    <div className={container}>
+    <div className={classNames("flex justify-center", className, container)}>
       {Object.keys(social).map((s) => {
         const link = social[s]
         return (

@@ -31,7 +31,7 @@ const Porfolio = () => {
   `)
   return (
     <Section title="Work" subtitle="portfolio">
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {data.allContentfulWork.edges.map((edge) => {
           const work = edge.node
           return <Work work={work} key={work.contentful_id} />

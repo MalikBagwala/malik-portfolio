@@ -19,8 +19,8 @@ const WorkDetail = ({ data }) => {
         subtitle="title"
         alternatingBackground={false}
       >
-        <div className="flex">
-          <div className="images w-1/2">
+        <div className="flex flex-col lg:flex-row">
+          <div className="images w-full lg:w-1/2">
             <Img
               className="mb-8 shadow rounded-lg"
               fluid={work.thumbnail.fluid}
@@ -38,7 +38,7 @@ const WorkDetail = ({ data }) => {
                 )
               })}
           </div>
-          <div className="sticky top-auto flex flex-col overflow-hidden px-6 w-1/2">
+          <div className="sticky top-auto flex flex-col overflow-hidden px-6 w-full lg:w-1/2">
             <div>
               <h2 className="text-xl mb-4 dark:text-gray-500">Description</h2>
               <RichText document={JSON.parse(work.description.description)} />
