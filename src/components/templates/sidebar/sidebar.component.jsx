@@ -2,7 +2,6 @@ import React from "react"
 import classNames from "../../../utils/classNames"
 import Avatar from "../../molecules/avatar/avatar.component"
 import DarkModeToggle from "../../molecules/dark-mode/dark-mode.component"
-import NavItem from "../../molecules/nav-item/nav-item.component"
 import Social from "../../molecules/social/social.component"
 import Navigation from "../../organisms/navigation/navigation.component"
 const Sidebar = () => {
