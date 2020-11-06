@@ -1,11 +1,10 @@
 import React from "react"
-import classNames from "../../../utils/classNames"
 import NavItem from "../../molecules/nav-item/nav-item.component"
 
 const Navigation = () => {
   return (
-    <nav className={classNames("hidden lg:block")}>
-      <ul>
+    <nav>
+      <ul className="flex justify-between lg:block">
         <NavItem>Home</NavItem>
         <NavItem id="about">About</NavItem>
         <NavItem id="work">Work</NavItem>

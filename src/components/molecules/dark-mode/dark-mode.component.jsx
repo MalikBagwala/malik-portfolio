@@ -6,6 +6,7 @@ const DarkModeToggle = () => {
   return (
     <ThemeToggler>
       {({ theme, toggleTheme }) => {
+        console.log(theme)
         return (
           <div className="lg:mt-5 cursor-pointer hover:opacity-75">
             {theme === "dark" ? (

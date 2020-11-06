@@ -10,25 +10,25 @@ const Sidebar = () => {
       className={classNames(
         "bg-white dark:bg-gray-800 lg:dark:bg-gray-900 shadow-lg dark:shadow-none dark:border-r dark:border-gray-800",
         "w-full lg:w-2.8/12 lg:h-full fixed lg:flex flex-col justify-between bottom-0 lg:top-0 left-0 z-50 p-4 lg:py-12 lg:px-8"
-        // sidebar
       )}
     >
-      <div
-        className={classNames(
-          "text-4xl hidden lg:flex flex-col text-center items-center justify-center"
-          // title
-        )}
-      >
-        <Avatar />
-        <span className="inline uppercase font-display tracking-wider dark:text-white">
-          Malik
-        </span>
-        <span className="inline text-base text-gray-800 dark:text-gray-200 tracking-wide">
-          front-end developer
-        </span>
+      <div className="flex justify-center flex-col items-center">
+        <div
+          className={classNames(
+            "text-4xl hidden lg:flex flex-col text-center items-center justify-center"
+          )}
+        >
+          <Avatar />
+          <span className="inline uppercase font-display tracking-wider dark:text-white">
+            Malik
+          </span>
+          <span className="inline text-base text-gray-800 dark:text-gray-200 tracking-wide">
+            front-end developer
+          </span>
+        </div>
         <DarkModeToggle />
       </div>
-      <DarkModeToggle />
+      {/* <DarkModeToggle /> */}
       <Navigation />
       <div
         className={classNames("flex flex-col justify-center align-baseline")}
