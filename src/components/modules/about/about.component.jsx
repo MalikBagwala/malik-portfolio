@@ -42,7 +42,7 @@ const About = () => {
           <Button
             as="a"
             target="__blank"
-            href="/cv.pdf"
+            href="/resume.pdf"
             className="mt-4 inline-flex"
           >
             <Icon name="report" className="h-4 mr-2" /> Resume
