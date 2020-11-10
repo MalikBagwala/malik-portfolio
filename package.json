@@ -9,7 +9,6 @@
     "@contentful/rich-text-types": "^14.1.1",
     "gatsby": "^2.15.9",
     "gatsby-image": "^2.2.17",
-    "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-google-analytics": "^2.3.0",
     "gatsby-plugin-manifest": "^2.2.14",
     "gatsby-plugin-offline": "^2.2.10",
@@ -24,7 +23,8 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
-    "tailwindcss": "^1.8.10"
+    "tailwindcss": "^1.8.10",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "serve": "^11.1.0",

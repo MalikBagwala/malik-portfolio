@@ -1,31 +1,25 @@
-import ThemeToggler from "gatsby-plugin-dark-mode/ThemeToggler"
 import React from "react"
+import useDarkMode from "use-dark-mode"
+import classNames from "../../../utils/classNames"
 import Icon from "../../atoms/icon/icon.component"
 
 const DarkModeToggle = () => {
+  const { value, toggle } = useDarkMode(false, {
+    classNameDark: "dark",
+    classNameLight: "light",
+  })
+
   return (
-    <ThemeToggler>
-      {({ theme, toggleTheme }) => {
-        console.log(theme)
-        return (
-          <div className="lg:mt-5 cursor-pointer hover:opacity-75">
-            {theme === "dark" ? (
-              <Icon
-                name="sun"
-                onClick={() => toggleTheme("light")}
-                className="fill-current h-6 text-white"
-              />
-            ) : (
-              <Icon
-                onClick={() => toggleTheme("dark")}
-                name="moon"
-                className="fill-current h-6 text-gray-900"
-              />
-            )}
-          </div>
-        )
-      }}
-    </ThemeToggler>
+    <div className="lg:mt-5 cursor-pointer hover:opacity-75">
+      <Icon
+        name={value ? "sun" : "moon"}
+        onClick={toggle}
+        className={classNames("fill-current h-6", {
+          "text-white": value,
+          "text-gray-900": !value,
+        })}
+      />
+    </div>
   )
 }
 

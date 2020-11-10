@@ -18,7 +18,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
-    `gatsby-plugin-dark-mode`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
