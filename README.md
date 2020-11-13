@@ -2,8 +2,7 @@
 
 <hr>
 
-<a href="https://malikbagwala.dev">
-<img src="https://raw.githubusercontent.com/MalikBagwala/malik-portfolio/master/static/thumbnail.png"></a>
+<a href="https://malikbagwala.dev"><img src="https://i.imgur.com/J5V3hCQ.png" title="source: imgur.com" /></a>
 
 <a href="https://malikbagwala.dev"><h1> Check It Out Live!</a>
 
