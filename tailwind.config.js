@@ -22,6 +22,10 @@ module.exports = {
           ...colors.gray,
           100: "#f7f7f7",
         },
+        yellow: {
+          ...colors.yellow,
+          link: "rgba(250, 208, 0, 0.2)",
+        },
       },
       fontSize: {
         "7xl": "8rem",
