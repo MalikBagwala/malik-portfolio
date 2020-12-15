@@ -1,14 +1,8 @@
-const { colors, fontFamily } = require("tailwindcss/defaultTheme")
+const { fontFamily } = require("tailwindcss/defaultTheme")
+const colors = require("tailwindcss/colors")
 module.exports = {
-  experimental: {
-    darkModeVariant: true,
-  },
-  dark: "class",
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
-  purge: ["./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.jsx", "./src/**/*.js"],
+  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
       width: {
@@ -32,17 +26,19 @@ module.exports = {
       },
     },
     fontFamily: {
-      ...fontFamily,
       sans: ["Karla", ...fontFamily.sans],
       display: ["Rubik", "Arial"],
     },
   },
   variants: {
-    borderColor: ["responsive", "hover", "focus", "dark"],
-    borderOpacity: ["responsive", "hover", "focus", "dark"],
-    borderRadius: ["responsive", "dark"],
-    borderStyle: ["responsive", "dark"],
-    borderWidth: ["responsive", "dark"],
-    backgroundColor: ["responsive", "odd", "hover", "focus", "dark"],
+    extend: {
+      borderColor: ["dark"],
+      borderOpacity: ["dark"],
+      borderRadius: ["dark"],
+      borderStyle: ["dark"],
+      borderWidth: ["dark"],
+      backgroundColor: ["odd", "dark"],
+    },
   },
+  plugins: [],
 }
