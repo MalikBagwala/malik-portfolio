@@ -11,7 +11,7 @@ const Work = ({ work }) => {
     <div
       onClick={(e) => navigate(work.slug)}
       className={classNames(
-        "bg-white dark:bg-gray-200 hover:shadow-lg cursor-pointer rounded-md",
+        "bg-white dark:bg-gray-200 shadow hover:shadow-lg cursor-pointer rounded-md",
         card
       )}
     >
