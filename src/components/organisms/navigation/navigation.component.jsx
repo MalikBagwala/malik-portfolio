@@ -8,7 +8,7 @@ const Navigation = () => {
         <NavItem>Home</NavItem>
         <NavItem id="about">About</NavItem>
         <NavItem id="work">Work</NavItem>
-        {/* <NavItem id="skills">Skills</NavItem> */}
+        <NavItem id="blog">Blog</NavItem>
         <NavItem id="contact">Contact</NavItem>
       </ul>
     </nav>

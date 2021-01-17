@@ -1,5 +1,6 @@
 import React from "react"
 import About from "../components/modules/about/about.component"
+import Blog from "../components/modules/blog/blog.component"
 import Contact from "../components/modules/contact/contact.component"
 import Hero from "../components/modules/hero/hero.component"
 import Porfolio from "../components/modules/portfolio/portfolio.component"
@@ -12,7 +13,7 @@ const IndexPage = () => {
       <Hero />
       <About />
       <Porfolio />
-      {/* <Skills /> */}
+      <Blog />
       <Contact />
     </Layout>
   )
