@@ -28,7 +28,6 @@ const Sidebar = () => {
         </div>
         <DarkModeToggle />
       </div>
-      {/* <DarkModeToggle /> */}
       <Navigation />
       <div
         className={classNames("flex flex-col justify-center align-baseline")}
