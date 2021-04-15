@@ -1,7 +1,0 @@
-.tags {
-  @apply mt-4 mb-10;
-}
-
-.tags span:not(:first-child) {
-  @apply ml-3;
-}
