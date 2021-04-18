@@ -1,0 +1,3 @@
+.container a:not(:first-child) {
+  @apply ml-3;
+}

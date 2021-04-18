@@ -1,0 +1,10 @@
+.base {
+  margin: 15px 0 15px 0;
+  padding: 0 0 10px 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.75em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #ececec;
+}
