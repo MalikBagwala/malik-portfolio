@@ -10,8 +10,6 @@ interface WorkCardProps {
   work: WorkSummaryType;
 }
 const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
-  console.log(work);
-
   return (
     <Link href={{ pathname: routes.workDetail, query: { slug: work.slug } }}>
       <div
