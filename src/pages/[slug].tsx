@@ -36,7 +36,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
         slug: work?.slug,
       },
     })),
-    fallback: true,
+    fallback: false,
   };
 };
 
@@ -48,7 +48,7 @@ const WorkDetail: React.FC<WorkDetailProps> = ({ work }) => {
   return (
     <section>
       <h1>Work Detail</h1>
-      <p>{work.title}</p>
+      <p>{work?.title}</p>
     </section>
   );
 };
