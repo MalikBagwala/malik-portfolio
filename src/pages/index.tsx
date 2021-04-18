@@ -17,10 +17,15 @@ export async function getStaticProps(context) {
       shortDescription
       title
       slug
+      thumbnail {
+        id
+        url
+      }
     }
   }
   `
   );
+  console.log(data);
 
   return {
     props: {
@@ -32,6 +37,8 @@ interface HomeProps {
   works: WorkSummaryType[];
 }
 const Home: React.FC<HomeProps> = ({ works }) => {
+  console.log(works);
+
   return (
     <Layout title="Home Page">
       <Hero />

@@ -25,3 +25,7 @@ a {
   letter-spacing: 2px;
   border-bottom: 1px solid #ececec;
 }
+
+.flat-image {
+  aspect-radio: 16/9;
+}

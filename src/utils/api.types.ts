@@ -3,6 +3,7 @@ export interface WorkSummaryType {
   slug: string;
   shortDescription: string;
   title: string;
+  thumbnail: { id: string; url: string };
 }
 
 export interface WorkDetailType extends WorkSummaryType {
