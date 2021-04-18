@@ -5,4 +5,6 @@ export interface WorkSummaryType {
   title: string;
 }
 
-export interface WorkDetailType extends WorkSummaryType {}
+export interface WorkDetailType extends WorkSummaryType {
+  description: string;
+}
