@@ -2,12 +2,12 @@ import { WorkSummaryType } from "../utils/api.types";
 import { getQuery } from "../utils/api.utils";
 import Link from "next/link";
 import routes from "../utils/app.routes";
-import About from "../components/modules/about/about.component";
-import Contact from "../components/modules/contact/contact.component";
+import About from "../components/modules/About";
+import Contact from "../components/modules/Contact";
 import Hero from "../components/modules/hero/hero.component";
-import Porfolio from "../components/modules/portfolio/portfolio.component";
+import Porfolio from "../components/modules/Portfolio";
 // import Skills from "../components/modules/skills/skills.component"
-import Layout from "../components/organisms/layout/layout.component";
+import Layout from "../components/Layout";
 export async function getStaticProps(context) {
   const { data } = await getQuery(
     `
@@ -36,7 +36,7 @@ const Home: React.FC<HomeProps> = ({ works }) => {
     <Layout title="Home Page">
       <Hero />
       <About />
-      <Porfolio />
+      <Porfolio works={works} />
       {/* <Skills /> */}
       <Contact />
     </Layout>

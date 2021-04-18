@@ -1,0 +1,27 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.nav-item {
+  margin: 15px 0 15px 0;
+  padding: 0 0 10px 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.75em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #ececec;
+}
